@@ -1,0 +1,13 @@
+name: DistrictCMS
+type: profile
+core_version_requirement: '^8.9'
+
+distribution:
+  name: DistrictCMS
+
+themes:
+  - stark
+  - stable
+  - classy
+  - seven
+  - gin

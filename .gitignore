@@ -1,0 +1,16 @@
+# --------------------
+# JetBrains IDEs files
+# --------------------
+
+# Project settings.
+.idea/
+
+# --------------------
+# SublimeText files
+# --------------------
+
+# Workspace settings.
+*.sublime-workspace
+
+# Project settings.
+*.sublime-project
