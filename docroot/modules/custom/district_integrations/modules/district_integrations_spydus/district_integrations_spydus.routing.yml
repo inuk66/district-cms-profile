@@ -1,0 +1,8 @@
+# JSON representation of data.
+district_integrations_spydus.json_data:
+  path: '/api/spydus/data/{id}'
+  defaults:
+    _controller: '\Drupal\district_integrations_spydus\Controller\SpydusController::data'
+    _title: 'Spydus Data'
+  requirements:
+    _permission: 'access content'

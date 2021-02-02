@@ -1,0 +1,10 @@
+main_menu:
+  js:
+    js/main-menu.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal
+    - core/drupalSettings
+    - core/drupal.announce
+    - core/drupal.dialog

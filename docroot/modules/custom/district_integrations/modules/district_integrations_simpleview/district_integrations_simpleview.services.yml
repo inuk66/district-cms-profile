@@ -1,0 +1,4 @@
+services:
+  district_integrations_simpleview.service:
+    class: Drupal\district_integrations_simpleview\SimpleviewService
+    arguments: ['@cache.default', '@http_client', '@logger.channel.district_integrations', '@config.factory']

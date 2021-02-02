@@ -1,0 +1,17 @@
+services:
+  plugin.manager.integration:
+    class: Drupal\district_integrations\Plugin\IntegrationManager
+    arguments: ['@container.namespaces', '@cache.discovery', '@module_handler']
+    parent: default_plugin_manager
+  plugin.manager.integration.api:
+    class: Drupal\district_integrations\Plugin\IntegrationApiManager
+    arguments: ['@container.namespaces', '@cache.discovery', '@module_handler']
+  plugin.manager.integration.embed:
+    class: Drupal\district_integrations\Plugin\IntegrationEmbedManager
+    arguments: ['@container.namespaces', '@cache.discovery', '@module_handler']
+  plugin.manager.integration.link:
+    class: Drupal\district_integrations\Plugin\IntegrationLinkManager
+    arguments: ['@container.namespaces', '@cache.discovery', '@module_handler']
+  logger.channel.district_integrations:
+    parent: logger.channel_base
+    arguments: ['district_integrations']

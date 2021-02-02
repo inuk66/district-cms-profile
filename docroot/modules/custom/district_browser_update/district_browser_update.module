@@ -1,0 +1,84 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for District Browser Update module.
+ *
+ * @DCG
+ * This file is no longer required in Drupal 8.
+ * @see https://www.drupal.org/node/2217931
+ */
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function district_browser_update_preprocess_page(&$variables) {
+  if (\Drupal::service('router.admin_context')->isAdminRoute()) {
+    return;
+  }
+
+  $settings = \Drupal::config('district_browser_update.settings');
+
+  $browsers = [
+    'ie_edge' => 'e',
+    'firefox' => 'f',
+    'opera' => 'o',
+    'safari' => 's',
+    'chrome' => 'c',
+  ];
+
+  $min_required_browsers = [];
+
+  foreach ($browsers as $browser => $browser_config_key) {
+    $setting_value = $settings->get($browser . '_req_version');
+
+    if (is_null($setting_value)) {
+      continue;
+    }
+
+    $min_required_browsers[] = $browser_config_key . ':' . $setting_value;
+  }
+
+  $browser_update_options = [
+    'insecure' => 'insecure',
+    'reminder' => 'reminder',
+    'reminder_closed' => 'reminderClosed',
+    'no_close' => 'noclose',
+    'no_permanent_hide' => 'no_permanent_hide',
+    'no_statistics' => 'nostatistics',
+  ];
+
+  $bu_options = [];
+
+  foreach ($browser_update_options as $option => $option_config_key) {
+    $setting_value = $settings->get($option);
+
+    if (is_null($setting_value)) {
+      continue;
+    }
+
+    $bu_options[] = $option_config_key . ':' . $setting_value;
+  }
+
+  $variables['page']['content'][] = [
+    'district_browser_update_block' => [
+      '#theme' => 'district_browser_update',
+      '#min_required_browsers' => '{' . implode(',', $min_required_browsers) . '}',
+      '#bu_options' => implode(',', $bu_options),
+    ],
+  ];
+}
+
+/**
+ * Implements hook_theme().
+ */
+function district_browser_update_theme($existing, $type, $theme, $path) {
+  return [
+    'district_browser_update' => [
+      'variables' => [
+        'min_required_browsers' => '{e:11,f:-3,o:-3,s:-3,c:-3}',
+        'bu_options' => '',
+      ],
+    ],
+  ];
+}

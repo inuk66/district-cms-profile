@@ -1,0 +1,130 @@
+id: simpleview_businesses
+label: Simpleview Businesses
+migration_group: simpleview_listings
+
+source:
+  urls: 'getListings'
+
+  ids:
+    id:
+      type: integer
+
+  fields:
+    - name: id
+      label: 'Unique ID'
+      selector: LISTINGID
+    - name: title
+      label: 'Title'
+      selector: COMPANY
+    - name: body
+      label: 'Body'
+      selector: DESCRIPTION
+    - name: category
+      label: 'Category'
+      selector: CATNAME
+    - name: address_line_1
+      label: 'Address line 1'
+      selector: ADDR1
+    - name: address_line_2
+      label: 'Address line 2'
+      selector: ADDR2
+    - name: address_line_3
+      label: 'Address line 3'
+      selector: ADDR3
+    - name: suburb
+      label: 'Suburb'
+      selector: CITY
+    - name: postcode
+      label: 'Postcode'
+      selector: ZIP
+    - name: state
+      label: 'State'
+      selector: STATE
+    - name: region
+      label: 'Region'
+      selector: REGION
+    - name: latitude
+      label: 'Latitude'
+      selector: LATITUDE
+    - name: longitude
+      label: 'Longitude'
+      selector: LONGITUDE
+    - name: email
+      label: 'Email'
+      selector: EMAIL
+    - name: phone
+      label: 'Phone'
+      selector: PHONE
+    - name: url
+      label: 'Website URL'
+      selector: WEBURL
+    - name: status
+      label: 'Status'
+      selector: ACCTSTATUS
+    # Custom field @see SimpleviewService::parseListing()
+    - name: contact
+      label: 'Contact'
+      selector: FIELD_CONTACT
+
+
+## Processors use the fields above to map to Drupal fields.
+process:
+  type:
+    plugin: default_value
+    default_value: business
+  id: id
+  title: title
+  body/value: body
+  body/format:
+    plugin: default_value
+    default_value: full_html
+  field_business_type:
+    plugin: entity_generate
+    source: category
+    bundle: business_type
+    entity_type: taxonomy_term
+    ignore_case: true
+  field_website/uri: url
+  field_phone: phone
+  field_address/address_line1: address_line_1
+  field_address/address_line2: address_line_2
+  field_address/locality: suburb
+  field_address/postal_code: postcode
+  field_address/administrative_area: state
+  # SOAP response doesn't have country.
+  field_address/country_code:
+    plugin: default_value
+    default_value: 'AU'
+  field_coordinates:
+    plugin: geofield_latlon
+    source:
+     - latitude
+     - longitude
+  field_contact:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: contact
+    -
+      plugin: component_paragraph
+  sticky:
+    plugin: default_value
+    default_value: 0
+  # TODO: check status from simpleview.
+  status:
+    plugin: default_value
+    default_value: 1
+  # TODO: check status from simpleview.
+  moderation_state:
+    plugin: default_value
+    default_value: 'published'
+  uid:
+    plugin: default_value
+    default_value: 1
+  path/pathauto:
+    plugin: default_value
+    default_value: 1
+
+destination:
+  plugin: 'entity:node'
+  default_bundle: business

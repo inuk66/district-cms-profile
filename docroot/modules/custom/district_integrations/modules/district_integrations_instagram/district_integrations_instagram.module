@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ *
+ * Add template for instagram posts.
+ */
+function district_integrations_instagram_theme() {
+  return [
+    'district_integrations_instagram_post' => [
+      'variables' => [
+        'tag' => '',
+        'title' => '',
+        'imageuri' => '',
+        'posturi' => '',
+      ],
+    ],
+    'district_integrations_instagram_post_list' => [
+      'variables' => [
+        'posts' => [],
+      ],
+    ],
+  ];
+}

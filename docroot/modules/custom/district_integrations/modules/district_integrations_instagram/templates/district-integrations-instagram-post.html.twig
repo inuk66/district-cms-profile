@@ -1,0 +1,25 @@
+{#
+/**
+* @file
+* Themeable template to display an instagram post.
+*
+* Available variables:
+* - posturi: Url to view the post on instagram.
+* - imageuri: Url to the image source.
+* - title: Text about the post.
+* - tag: The tag that found this post.
+*/
+#}
+<article class="instagram-remote-content-post">
+  {#
+    Image is added via background-image so it can scale and crop dynamically.
+    The following is required to see the image: background-size: cover; display: block;
+  #}
+  <a href="{{ posturi }}"
+     target="_blank"
+     style="background-image: url('{{ imageuri }}')"
+     title="{{ title }}"
+     class="instagram-remote-content-post__image">
+  </a>
+  <span class="instagram-remote-content-post__tag">#{{ tag }}</span>
+</article>

@@ -1,0 +1,8 @@
+spydus:
+  version: 1.x
+  js:
+    js/spydus.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/jquery.once

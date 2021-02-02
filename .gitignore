@@ -4,7 +4,10 @@
 
 # Commposer download locations.
 /bin
-/docroot
+/docroot/*
+/docroot/modules/contrib/
+/docroot/modules/**/README.txt
+!/docroot/modules/
 /vendor
 
 # Project settings.

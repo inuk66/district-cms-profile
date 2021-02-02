@@ -1,0 +1,5 @@
+district_integrations.settings:
+  title: 'District Integrations'
+  route_name: district_integrations.settings
+  description: 'List and configure District integrations.'
+  parent: district_core.config

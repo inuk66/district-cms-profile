@@ -1,0 +1,22 @@
+{#
+/**
+* @file
+* Template for the district_browser_update theme.
+*
+* We are using this snippet, created from http://browser-update.org/, because the
+* 'Browser update' contrib (https://www.drupal.org/project/bu) doesn't show a banner
+* in IE10.
+*/
+#}
+<script>
+  var $buoop = {required:{{ min_required_browsers }},{{ bu_options }},api:2020.09 };
+
+  function $buo_f(){
+    var e = document.createElement("script");
+    e.src = "//browser-update.org/update.min.js";
+    document.body.appendChild(e);
+  };
+
+  try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
+  catch(e){window.attachEvent("onload", $buo_f)}
+</script>

@@ -1,0 +1,182 @@
+<?php
+
+/**
+ * @file
+ * Contains district_menu.module.
+ */
+
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\menu_item_extras\Utility\Utility;
+
+/**
+ * Implements hook_help().
+ */
+function district_menu_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the district_menu module.
+    case 'help.page.district_menu':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Menu related functionality') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ *
+ * Add template for main menus using the menu_item_extras module.
+ */
+function district_menu_theme() {
+  return [
+    'menu__extras__main' => [
+      'template' => 'menu--extras--main',
+      'base hook' => 'menu',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_entity_extra_field_info().
+ *
+ * The menu_item_extras module doesn't provided a draggable field for title
+ * and description. So we create them as pseudo fields here.
+ */
+function district_menu_entity_extra_field_info() {
+  $fields = [];
+  foreach (array_keys(\Drupal::service('entity_type.bundle.info')->getBundleInfo('menu_link_content')) as $bundle) {
+    $fields['menu_link_content'][$bundle]['display']['menu_link_content_title'] = [
+      'label' => t('Title'),
+      'description' => t('The plain text title of the menu link.'),
+      'visible' => TRUE,
+      'weight' => 1,
+    ];
+    $fields['menu_link_content'][$bundle]['display']['menu_link_content_description'] = [
+      'label' => t('Description'),
+      'description' => t('The menu link description'),
+      'visible' => TRUE,
+      'weight' => 2,
+    ];
+  }
+  return $fields;
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_view().
+ *
+ * Render any extra fields defined in district_menu_entity_extra_field_info().
+ */
+function district_menu_menu_link_content_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+  if ($display->getComponent('menu_link_content_title')) {
+    $build['menu_link_content_title'] = [
+      '#type' => 'inline_template',
+      '#template' => '<div class="menu-item__title">{{ title }}</div>',
+      '#context' => [
+        'title' => $entity->label(),
+      ],
+    ];
+  }
+  if ($display->getComponent('menu_link_content_description')) {
+    $build['menu_link_content_description'] = [
+      '#type' => 'inline_template',
+      '#template' => '<div class="menu-item__description">{{ description }}</div>',
+      '#context' => [
+        'description' => $entity->description->getString(),
+      ],
+    ];
+  }
+}
+
+/**
+ * Implements hook_preprocess_menu__extras__main().
+ *
+ * Attach javascript and class to main menu using the menu__extras__main theme
+ * provided by the menu_item_extras.module.
+ */
+function district_menu_preprocess_menu__extras__main(&$variables) {
+  $variables['#attached']['library'][] = 'district_menu/main_menu';
+  $variables['attributes']['class'][] = 'js-menu-extras-main';
+}
+
+/**
+ * Implements hook_preprocess_block__system_menu_block__main().
+ *
+ * Because the main menu is being rendered multiple times on the page, we only
+ * want the template provided by menu_item_extras.module to be used on the
+ * navigation in the header (not the mobile slider).
+ *
+ * Check the block configuration for the css_class "menu-item-extras-enabled",
+ * if it exists, we need to pass information to the menu telling it to render
+ * using the template from menu_item_extras.module.
+ * Ideally I would have liked to have used a checkbox on the context block form
+ * instead of adding a class, but I ran into some problems getting that to work.
+ *
+ * @Todo add a checkbox to context menu block forms to enable this functionality.
+ */
+function district_menu_preprocess_block__system_menu_block__main(&$variables) {
+  if (!empty($variables['configuration']['css_class']) && $variables['configuration']['css_class'] == 'menu-item-extras-enabled') {
+    $variables['content']['#attributes']['data-menu-item-extras'] = TRUE;
+    $variables['content']['#rabbits'] = TRUE;
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_menu_alter().
+ *
+ * This is where we check if data-menu-item-extras attribute has been set from
+ * our block preprocess. If it hasn't been set, we remove any theme
+ * suggestions added by the menu_item_extras module.
+ */
+function district_menu_theme_suggestions_menu_alter(array &$suggestions, array $variables) {
+  if (isset($variables['menu_name']) && $variables['menu_name'] == 'main') {
+    $use_default_theme = !isset($variables['attributes']['data-menu-item-extras']);
+    $is_fieldable_menu = Utility::checkBundleHasExtraFieldsThanEntity('menu_link_content', $variables['menu_name']);
+    if ($is_fieldable_menu && $use_default_theme) {
+      $suggestion_prefix = 'menu__extras';
+      foreach($suggestions as $index => $suggestion) {
+        if (substr($suggestion, 0, strlen($suggestion_prefix)) === $suggestion_prefix) {
+          unset($suggestions[$index]);
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_module_implements_alter();
+ *
+ * Unset and re-apply this modules implementation of theme_suggestions_menu_alter
+ * so our function is run last, allowing us to remove any suggestions added
+ * by the menu_item_extras module if we need to.
+ */
+function district_menu_module_implements_alter(&$implementations, $hook) {
+  if ($hook == 'theme_suggestions_menu_alter') {
+    $group = $implementations['district_menu'];
+    unset($implementations['district_menu']);
+    $implementations['district_menu'] = $group;
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_presave();
+ *
+ * Ensures top level menu links are set to use the "top_level" viewmode when
+ * saved, otherwise use the default viewmode.
+ *
+ * @param \Drupal\Core\Entity\EntityInterface $entity
+ */
+function district_menu_menu_link_content_presave(EntityInterface $entity) {
+  $bundle = $entity->bundle();
+  if ($bundle == 'main' && Utility::checkBundleHasExtraFieldsThanEntity('menu_link_content', $bundle)) {
+    if ($entity->getParentId() == '') {
+      $entity->set('view_mode', 'top_level');
+    }
+    else {
+      $entity->set('view_mode', 'default');
+    }
+  }
+}

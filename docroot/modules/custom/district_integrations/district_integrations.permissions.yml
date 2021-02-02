@@ -1,0 +1,4 @@
+admminister district integrations:
+  title: 'Administer District Integrations'
+  description: 'Allows the administration of DistrictCMS integrations.'
+  restrict access: TRUE

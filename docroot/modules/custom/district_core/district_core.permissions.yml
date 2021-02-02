@@ -1,0 +1,4 @@
+admminister district settings:
+  title: 'Administer District Settings'
+  description: 'Allows the administration of DistrictCMS settings.'
+  restrict access: TRUE

@@ -1,0 +1,5 @@
+district_events.settings:
+  title: 'District Events'
+  route_name: district_events.settings
+  description: 'Configure District events settings.'
+  parent: district_core.config

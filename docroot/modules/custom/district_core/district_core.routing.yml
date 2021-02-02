@@ -1,0 +1,8 @@
+district_core.config:
+  path: '/admin/config/district'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'DistrictCMS'
+  requirements:
+    _permission: 'admminister district settings'
+

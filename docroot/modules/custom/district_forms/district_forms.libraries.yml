@@ -1,0 +1,8 @@
+form_selector:
+  version: 1.x
+  js:
+    js/form_selector.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/jquery.once

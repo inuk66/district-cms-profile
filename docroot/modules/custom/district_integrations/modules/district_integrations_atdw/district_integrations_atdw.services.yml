@@ -1,0 +1,4 @@
+services:
+  district_integrations_atdw.api_service:
+    class: Drupal\district_integrations_atdw\AtdwApiService
+    arguments: ['@cache.default', '@http_client', '@logger.channel.district_integrations', '@config.factory']

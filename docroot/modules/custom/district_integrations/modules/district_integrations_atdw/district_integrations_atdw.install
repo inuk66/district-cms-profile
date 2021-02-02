@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the module.
+ */
+
+/**
+ * Implements hook_uninstall().
+ */
+function district_integrations_atdw_uninstall() {
+  // Remove module configuration.
+  $module_configs = [
+    'district_integrations.api.atdw',
+    'migrate_plus.migration.atdw_businesses',
+    'migrate_plus.migration.atdw_businesses_images',
+    'migrate_plus.migration.atdw_events',
+    'migrate_plus.migration.atdw_events_images',
+    'migrate_plus.migration_group.atdw_products',
+  ];
+
+  foreach ($module_configs as $config_name) {
+    \Drupal::configFactory()->getEditable($config_name)->delete();
+  }
+}

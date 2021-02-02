@@ -1,0 +1,21 @@
+district_integrations.settings:
+  path: '/admin/config/district/integrations'
+  defaults:
+    _controller: '\Drupal\district_integrations\Controller\IntegrationSettings::index'
+    _title: 'District Integrations'
+  requirements:
+    _permission: 'admminister district integrations'
+district_integrations.settings_edit:
+  path: '/admin/config/district/integrations/{type}/{plugin_id}'
+  defaults:
+    _controller: '\Drupal\district_integrations\Controller\IntegrationSettings::edit'
+    _title_callback: '\Drupal\district_integrations\Controller\IntegrationSettings::editTitle'
+  requirements:
+    _permission: 'admminister district integrations'
+district_integrations.embed_view:
+  path: '/district/integrations/embed/{plugin_id}/{link_id}'
+  defaults:
+    _controller: '\Drupal\district_integrations\Controller\EmbedController::view'
+    _title_callback: '\Drupal\district_integrations\Controller\EmbedController::viewTitle'
+  requirements:
+    _permission: 'access content'

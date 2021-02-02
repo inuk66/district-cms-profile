@@ -1,0 +1,14 @@
+{#
+/**
+* @file
+* Themeable template to display a list of instagram posts.
+*
+* Available variables:
+* - posts: The list of posts.
+*/
+#}
+<div class="instagram-remote-content">
+  {% for post in posts %}
+    {{ post }}
+  {% endfor %}
+</div>

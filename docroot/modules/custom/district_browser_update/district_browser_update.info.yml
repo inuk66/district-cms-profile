@@ -1,0 +1,6 @@
+name: District Browser Update
+type: module
+description: Provide a browser snippet to check if the browser is out of date.
+package: District
+core: 8.x
+core_version_requirement: ^8 || ^9

@@ -1,0 +1,8 @@
+type: module
+name: District Integrations Examples
+description: Example integration plugins for Demo purposes only.
+version: 8.x-1.0
+core: 8.x
+package: District
+dependencies:
+  - district_integrations:district_integrations

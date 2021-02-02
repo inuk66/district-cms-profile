@@ -1,0 +1,132 @@
+<?php
+
+use Drupal\Core\Render\BubbleableMetadata;
+
+/**
+ * Helper to get an integration manager for a specific type.
+ *
+ * @param string $type
+ *   The integration type. Eg api, embed, link.
+ *
+ * @return \Drupal\district_integrations\Plugin\IntegrationPluginManagerInterface
+ *   A plugin manager for the given type.
+ */
+function district_integrations_plugins($type) {
+  return \Drupal::service('plugin.manager.integration.' . $type);
+}
+
+/**
+ * Helper to get a specific integration plugin.
+ *
+ * @param string $type
+ *   The integration type. Eg api, embed, link.
+ * @param string $plugin_id
+ *   The name of the plugin.
+ *
+ * @return \Drupal\district_integrations\Plugin\IntegrationInterface|object
+ *   Instance of a plugin.
+ *
+ * @throws \Drupal\Component\Plugin\Exception\PluginException
+ */
+function district_integrations_plugin($type, $plugin_id) {
+  $plugin_manager = district_integrations_plugins($type);
+  return $plugin_manager->createInstance($plugin_id, []);
+}
+
+/**
+ * Helper to get a specific integration plugin config.
+ *
+ * @param string $type
+ *   The integration type. Eg api, embed, link.
+ * @param string $plugin_id
+ *   The name of the plugin.
+ *
+ * @return array
+ *   Config array.
+ */
+function district_integrations_plugin_config($type, $plugin_id) {
+  try {
+    $instance = district_integrations_plugin($type, $plugin_id);
+    return $instance->getConfiguration();
+  } catch (Exception $e) {
+    return [];
+  }
+}
+
+/**
+ * Implements hook_token_info().
+ *
+ * Define the tokens for integration plugins.
+ */
+function district_integrations_token_info() {
+  $plugin_types = ['embed', 'link'];
+  $tokens = [];
+
+  foreach ($plugin_types as $type) {
+    $plugin_manager = district_integrations_plugins($type);
+    foreach ($plugin_manager->getDefinitions() as $plugin_id => $plugin) {
+      $plugin_instance = $plugin_manager->createInstance($plugin_id, ['of' => 'configuration values']);
+      $config = $plugin_instance->getConfiguration();
+
+      $tokens['district_' . $type] = [];
+      foreach ($config['urls'] as $link) {
+        $tokens['district_' . $type][$plugin_id . '_' . $link['id']] = [
+          'name' => $plugin['label'] . ' - ' . $link['label'],
+          'description' => t('Add a @label @type', ['@label' => $link['label'], '@type' => $type]),
+        ];
+      }
+    }
+  }
+
+  return [
+    'types' => [
+      'district_embed' => [
+        'name' => t('Integration embed'),
+        'description' => t('District integration embeds.'),
+      ],
+      'district_link' => [
+        'name' => t('Integration links'),
+        'description' => t('District integration links.'),
+      ],
+    ],
+    'tokens' => $tokens,
+  ];
+}
+
+/**
+ * Implements hook_token().
+ *
+ * Render the tokens for integration plugins.
+ */
+function district_integrations_tokens($type, $tokens, array $data, array $options, BubbleableMetadata $bubbleable_metadata) {
+  $plugin_types = ['embed', 'link'];
+  $replacements = [];
+
+  foreach ($plugin_types as $plugin_type) {
+    if ($type === 'district_' . $plugin_type) {
+      $plugin_manager = district_integrations_plugins($plugin_type);
+
+      // Loop over type plugins.
+      foreach ($plugin_manager->getDefinitions() as $plugin_id => $plugin) {
+
+        // Loop over passed tokens.
+        foreach ($tokens as $name => $original) {
+          $plugin_instance = $plugin_manager->createInstance($plugin_id, ['of' => 'configuration values']);
+          $config = $plugin_instance->getConfiguration();
+
+          foreach ($config['urls'] as $link) {
+            $token_key = $plugin_id . '_' . $link['id'];
+
+            // Replace the original token with the rendered content.
+            if ($name === $token_key) {
+              $replacements[$original] = $plugin_instance->render($link);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  return $replacements;
+}
+

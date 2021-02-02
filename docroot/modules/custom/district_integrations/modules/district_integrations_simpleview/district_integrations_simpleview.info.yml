@@ -1,0 +1,14 @@
+type: module
+name: District Integrations Simpleview
+description: Integration with Simpleview CRM
+version: 8.x-1.0
+core: 8.x
+package: District
+dependencies:
+  - district_integrations:district_integrations
+
+# To re-import below migrations/configs run `drush cdi district_integrations_simpleview`
+config_devel:
+  install:
+    - migrate_plus.migration_group.simpleview_listings
+    - migrate_plus.migration.simpleview_businesses

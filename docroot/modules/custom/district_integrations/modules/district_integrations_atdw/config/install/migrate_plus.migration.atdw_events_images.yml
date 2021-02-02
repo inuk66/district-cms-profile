@@ -1,0 +1,33 @@
+id: atdw_events_images
+label: ATDW Events Images
+migration_group: atdw_products
+
+source:
+  urls: 'products'
+  categories: 'EVENT'
+
+  ids:
+    id:
+      type: string
+
+## Processors use the fields above to map to Drupal fields.
+process:
+  bundle:
+    plugin: default_value
+    default_value: image
+  uid:
+    plugin: default_value
+    default_value: 1
+  name: title
+  field_media_image:
+    plugin: image_import
+    alt: title
+    source: image
+    destination: constants/atdw_images_dir
+
+## Where to save.
+destination:
+  plugin: 'entity:media'
+  default_bundle: image
+
+

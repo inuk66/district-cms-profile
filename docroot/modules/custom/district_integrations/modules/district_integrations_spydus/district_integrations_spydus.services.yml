@@ -1,0 +1,4 @@
+services:
+  district_integrations_spydus.service:
+    class: Drupal\district_integrations_spydus\SpydusService
+    arguments: ['@cache.default', '@http_client', '@logger.channel.district_integrations', '@config.factory']

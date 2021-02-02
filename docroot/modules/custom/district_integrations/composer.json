@@ -1,0 +1,17 @@
+{
+    "name": "doghouse/district_integrations",
+    "description": "District integrations framework",
+    "type": "drupal-module",
+    "license": "GPL-2.0+",
+    "authors": [
+        {
+            "name": "Doghouse Agency",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "symfony/dom-crawler": "~2.8|~3.0|~4.0",
+        "doghouseagency/simpleview-crm-php": "^1.0"
+    }
+}

@@ -1,0 +1,79 @@
+id: atdw_events
+label: ATDW Events
+migration_group: atdw_products
+
+source:
+  urls: 'products'
+  categories: 'EVENT'
+
+  ids:
+    id:
+      type: string
+
+## Processors use the fields above to map to Drupal fields.
+process:
+  type:
+    plugin: default_value
+    default_value: event
+  id: id
+  title: title
+  body/value: body
+  body/format:
+    plugin: default_value
+    default_value: full_html
+  field_image:
+    plugin: migration_lookup
+    migration: atdw_events_images
+    source: id
+  field_tags:
+    plugin: entity_generate
+    source: classifications
+    bundle: tags
+    entity_type: taxonomy_term
+    ignore_case: true
+  field_website/uri: url
+  field_phone: phone
+  field_dates: event_dates
+  field_coordinates:
+    -
+      plugin: explode
+      source: coordinates
+      delimiter: ','
+    -
+      plugin: single_value
+    -
+      plugin: geofield_latlon
+  field_address/address_line1: address_line_1
+  field_address/address_line2: address_line_2
+  field_address/locality: suburb
+  field_address/postal_code: postcode
+  field_address/administrative_area:
+    plugin: default_value
+    default_value: 'VIC'
+  # TODO: Need proper lookups here.
+  field_address/country_code:
+    plugin: default_value
+    default_value: 'AU'
+  sticky:
+    plugin: default_value
+    default_value: 0
+  status:
+    plugin: default_value
+    default_value: 1
+  moderation_state:
+    plugin: default_value
+    default_value: 'published'
+  uid:
+    plugin: default_value
+    default_value: 1
+  path/pathauto:
+    plugin: default_value
+    default_value: 1
+
+destination:
+  plugin: 'entity:node'
+  default_bundle: event
+
+migration_dependencies:
+  required:
+    - atdw_events_images

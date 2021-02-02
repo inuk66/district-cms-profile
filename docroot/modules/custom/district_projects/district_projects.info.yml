@@ -1,0 +1,6 @@
+name: District Projects
+type: module
+description: Project content type related functionality.
+package: District
+core: 8.x
+core_version_requirement: ^8 || ^9

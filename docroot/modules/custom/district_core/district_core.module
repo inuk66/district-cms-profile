@@ -1,0 +1,44 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter().
+ *
+ * Add sidebar to taxonomy term form.
+ *
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ * @param $form_id
+ */
+function district_core_form_taxonomy_term_form_alter(&$form, FormStateInterface $form_state) {
+  // Mimic node edit form to get meta fields in sidebar.
+  $form['#theme'] = ['node_edit_form'];
+  $form['#attached']['library'][] = 'seven/node-form';
+  $form['advanced']['#type'] = 'container';
+  // Relocate fields to the sidebar.
+  _district_core_relocate_fields([
+    'relations' => 'advanced',
+    'path' => 'advanced',
+  ], $form);
+}
+
+/**
+ * Relocate fields.
+ *
+ * Move fields into container elements.
+ *
+ * @param array $groups
+ *  The list of groups to move (fieldname -> groupname)
+ * @param array $form
+ *  The render array for a form.
+ */
+function _district_core_relocate_fields(array $groups, array &$form) {
+  foreach ($groups as $field_name => $group_name) {
+    if (!empty($form[$field_name])) {
+      $form[$field_name]['#group'] = $group_name;
+      $form[$group_name][$field_name] = $form[$field_name];
+      unset($form[$field_name]);
+    }
+  }
+}

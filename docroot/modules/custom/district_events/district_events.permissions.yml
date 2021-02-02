@@ -1,0 +1,4 @@
+administer district events:
+  title: 'Administer District Events settings'
+  description: 'Allows changing configurations in District events.'
+  restrict access: TRUE

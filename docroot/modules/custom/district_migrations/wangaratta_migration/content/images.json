@@ -1,0 +1,86 @@
+{
+  "title": "wangaratta.ymca.org.au (/) (images)",
+  "url": "https://wangaratta.ymca.org.au/",
+  "path": "/",
+  "id": "images:21",
+  "site_id": 21,
+  "site_path": "/site/21",
+  "updated": "2020-07-13T21:19:02.000000Z",
+  "items": [],
+  "settings": {
+    "crawler": [
+      {
+        "type": "http",
+        "title": "HTTP Spider",
+        "match_domain": true,
+        "load_js": false,
+        "ignore_robots": false,
+        "delay": 1,
+        "match_path": null,
+        "max_size": 3,
+        "extra_urls": null,
+        "sitemap_xml": true,
+        "sitemap_xml_path": "/sitemap.xml",
+        "follow_redirects": true
+      }
+    ],
+    "parser": [
+      {
+        "type": "PathToType",
+        "title": "Path to type parser",
+        "source_key": "raw",
+        "dest_key": "content_type",
+        "default": "page",
+        "mappings": "/news|article\n/user|user"
+      },
+      {
+        "type": "Images",
+        "title": "Images Parser",
+        "source_key": "raw",
+        "dest_key": "images",
+        "default": null,
+        "regex_exclude": null,
+        "regex_include": null
+      },
+      {
+        "type": "Assets",
+        "title": "Assets and documents parser",
+        "source_key": "raw",
+        "dest_key": "assets",
+        "default": null
+      },
+      {
+        "type": "Forms",
+        "title": "Forms parser",
+        "source_key": "raw",
+        "dest_key": "forms",
+        "default": null
+      },
+      {
+        "type": "Dom",
+        "title": "Body parser",
+        "source_key": "raw",
+        "dest_key": "body",
+        "default": null,
+        "selector": ".rich-text",
+        "path_match": null,
+        "strip_attributes": false,
+        "strip_tags": false,
+        "remove_content": false
+      },
+      {
+        "type": "Dom",
+        "title": "Title parser",
+        "source_key": "raw",
+        "dest_key": "title",
+        "default": null,
+        "selector": "title",
+        "path_match": null,
+        "strip_attributes": false,
+        "strip_tags": false,
+        "remove_content": false
+      }
+    ]
+  },
+  "limit": 500
+}

@@ -1,0 +1,13 @@
+{#
+/**
+ * @file
+ * Template override for menu__extras__main.
+ *
+ * Importing the original template, but wrapping it in a containing div
+ * to make use of the attributes variable.
+ */
+#}
+
+<div {{ attributes }}>
+  {% include '@menu_item_extras/menu--extras.html.twig' %}
+</div>

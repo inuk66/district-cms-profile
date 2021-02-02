@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * Implements hook_views_data_alter().
+ */
+function district_locations_views_data_alter(array &$data) {
+  // TODO: Make dynamic so added based on field type.
+  $data["node__field_address"]["field_address_locality"]["filter"]["id"] = "suburb_filter";
+}
+
+/**
+ * Helper to return a list of suburbs, suitable for an options list.
+ *
+ * @return array
+ *   Associative array key/value is suburb name.
+ */
+function district_locations_get_suburb_options($show_postcode = TRUE) {
+  $out = [];
+
+  try {
+    $terms = \Drupal::entityTypeManager()->getStorage('taxonomy_term')
+      ->loadByProperties([ 'vid' => 'suburb']);
+
+    foreach ($terms as $term) {
+      $label = $term->label();
+      $postcode = $term->get('field_postcode')->getString();
+      $out[$label] = $label . ($show_postcode && $postcode ? ' (' . $postcode . ')' : '');
+    }
+  }
+  catch (Exception $e) {
+    // Failed to load suburbs.
+  }
+
+  return $out;
+}

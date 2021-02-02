@@ -1,0 +1,80 @@
+<?php
+
+use Drupal\Core\Entity\RevisionLogInterface;
+use Drupal\node\NodeInterface;
+
+/**
+ * Implements hook_cron().
+ *
+ * Unpublish expired events.
+ */
+function district_events_cron() {
+  $config = \Drupal::config('district_events.settings');
+  $unpublish = $config->get('unpublish_expired_events');
+  $unpublished_state = 'archived';
+
+  if ($unpublish) {
+    $request_time = \Drupal::time()->getRequestTime();
+    $cron_last_run = \Drupal::state()->get('district_events.unpublish_cron_last');
+    $frequency = 86400;
+
+    // Run cron once a day.
+    if (empty($cron_last_run) || (($request_time - $cron_last_run) >= $frequency)) {
+      // Get published events that has future dates.
+      $now = time();
+      $events = \Drupal::entityQuery('node')
+        ->condition('type', 'event')
+        ->condition('status', NodeInterface::PUBLISHED)
+        ->condition('field_dates.end_value', $now, '>')
+        ->execute();
+      $future_event_nids = array_values($events);
+
+      // Get expired events:
+      // published events which has dates field and not in the future.
+      $query = \Drupal::entityQuery('node')
+        ->condition('type', 'event')
+        ->exists('field_dates')
+        ->condition('status', NodeInterface::PUBLISHED);
+
+      if (!empty($future_event_nids)) {
+        $query->condition('nid', $future_event_nids, 'NOT IN');
+      }
+      $expired_events = $query->execute();
+
+      if (!empty($expired_events)) {
+        $storage = \Drupal::entityTypeManager()->getStorage('node');
+        $nids = array_values($expired_events);
+        $past_events = $storage->loadMultiple($nids);
+
+        foreach ($past_events as $past_event) {
+          // Unpublished event: transition it to archived.
+          try {
+            $newRevision = $storage->createRevision($past_event);
+            $newRevision->set('moderation_state', $unpublished_state);
+
+            if ($newRevision instanceof RevisionLogInterface) {
+              $newRevision->setRevisionCreationTime($now);
+              $newRevision->setRevisionLogMessage('District events: unpublish expired event');
+              $newRevision->setRevisionUserId(\Drupal::currentUser()->id());
+            }
+            $newRevision->save();
+
+            \Drupal::logger('district_events')
+              ->info('Unpublish expired event: @event_name', [
+                '@event_name' => $past_event->getTitle(),
+              ]);
+          }
+          catch (Exception $e) {
+            \Drupal::logger('district_events')
+              ->error('Error when trying to unpublish expired event: @event_name . Message: @message', [
+                '@event_name' => $past_event->getTitle(),
+                '@message' => $e->getMessage(),
+              ]);
+          }
+        }
+      }
+
+      \Drupal::state()->set('district_events.unpublish_cron_last', $request_time);
+    }
+  }
+}

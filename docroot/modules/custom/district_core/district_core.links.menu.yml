@@ -1,0 +1,5 @@
+district_core.config:
+  title: 'DistrictCMS'
+  parent: system.admin_config
+  route_name: district_core.config
+  weight: -100

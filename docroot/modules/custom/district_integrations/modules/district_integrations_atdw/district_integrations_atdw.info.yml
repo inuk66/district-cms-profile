@@ -1,0 +1,17 @@
+type: module
+name: District Integrations ATDW
+description: Integration with Australian Tourism Data Warehouse
+version: 8.x-1.0
+core: 8.x
+package: District
+dependencies:
+  - district_integrations:district_integrations
+
+# To re-import below migrations/configs run `drush cdi district_integrations_atdw`
+config_devel:
+  install:
+    - migrate_plus.migration_group.atdw_products
+    - migrate_plus.migration.atdw_businesses_images
+    - migrate_plus.migration.atdw_businesses
+    - migrate_plus.migration.atdw_events_images
+    - migrate_plus.migration.atdw_events

@@ -1,0 +1,8 @@
+type: module
+name: District Integrations
+description: Base module that defines how external integrations should register their plugins
+version: 8.x-1.0
+core: 8.x
+package: District
+dependencies:
+  - district_core:district_core

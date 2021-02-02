@@ -1,0 +1,8 @@
+district_events.settings:
+  path: '/admin/config/district/events'
+  defaults:
+    _form: '\Drupal\district_events\Form\DistrictEventsSettingsForm'
+    _title: 'District Events'
+  requirements:
+    _permission: 'administer district events'
+

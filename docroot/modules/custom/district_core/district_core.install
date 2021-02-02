@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * Remove paragraph types.
+ * @throws \Drupal\Core\Entity\EntityStorageException
+ */
+function district_core_update_8001() {
+  try {
+    $paragraphs = \Drupal::entityTypeManager()
+      ->getStorage('paragraph')
+      ->loadByProperties([
+        'type' => ['card', 'basic_content', 'layout_flag', 'layout_multi_column', 'layout_text_on_image'],
+      ]);
+
+    foreach ($paragraphs as $paragraph) {
+      $paragraph->delete();
+    }
+
+  } catch (Exception $e) {
+    \Drupal::logger('Remove Paragraphs')->error($e);
+  }
+}
+

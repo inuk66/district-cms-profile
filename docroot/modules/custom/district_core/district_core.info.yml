@@ -1,0 +1,6 @@
+type: module
+name: District Core
+description: Core functionality requierd for the DistrictCMS platform
+version: 8.x-1.0
+core: 8.x
+package: District

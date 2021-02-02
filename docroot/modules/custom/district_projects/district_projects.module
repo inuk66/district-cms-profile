@@ -1,0 +1,67 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for District Projects module.
+ *
+ * @DCG
+ * This file is no longer required in Drupal 8.
+ * @see https://www.drupal.org/node/2217931
+ */
+
+use Drupal\Core\Url;
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Implements hook_entity_extra_field_info().
+ *
+ * Add a new 'anonymous_comments_login_link' field for nodes.
+ */
+function district_projects_entity_extra_field_info() {
+  $extra = [];
+
+  $bundles = \Drupal\node\Entity\NodeType::loadMultiple();
+
+  foreach ($bundles as $bundle) {
+    $extra['node'][$bundle->id()]['display']['anonymous_comments_login_link'] = [
+      'label' => t('Anonymous User Comment Login Link'),
+      'description' => t('Show a login link for anonymous users.'),
+      'visible' => FALSE,
+    ];
+  }
+
+  return $extra;
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_view().
+ *
+ * Render a login link for anonymous users.
+ */
+function district_projects_node_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+  if (!$display->getComponent('anonymous_comments_login_link') || !\Drupal::currentUser()->isAnonymous()) {
+    return;
+  }
+
+  $destination = ['destination' => $entity->toUrl('canonical', ['fragment' => 'comment-form'])->toString()];
+
+  $build['anonymous_comments_login_link'] = [
+    '#type' => 'container',
+    '#attributes' => [
+      'class' => ['district-comments-login-link'],
+    ],
+  ];
+
+  $build['anonymous_comments_login_link']['content'] = [
+    '#type' => 'html_tag',
+    '#tag' => 'div',
+    '#attributes' => [
+      'class' => ['district-comments-login-link__content']
+    ],
+    '#value' => t('<a href=":login">Log in</a> or <a href=":register">register</a> to post comments', [
+      ':login' => Url::fromRoute('user.login', [], ['query' => $destination])->toString(),
+      ':register' => Url::fromRoute('user.register', [], ['query' => $destination])->toString(),
+    ]),
+  ];
+}

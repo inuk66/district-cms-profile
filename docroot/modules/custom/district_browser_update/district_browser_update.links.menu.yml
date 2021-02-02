@@ -1,0 +1,6 @@
+district_browser_update.settings_form:
+  title: District Browser Update Settings
+  description: Configure District Browser Update Settings
+  parent: district_core.config
+  route_name: district_browser_update.settings_form
+  weight: 10

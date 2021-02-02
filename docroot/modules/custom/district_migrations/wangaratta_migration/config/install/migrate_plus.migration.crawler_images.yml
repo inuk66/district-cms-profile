@@ -1,0 +1,61 @@
+id: crawler_images
+label: Crawler Images
+migration_group: crawler_migrate
+
+## Source is largely defined by this module. See configuration for more options. Here you
+## only need to specify `plugin: crawler`.
+source:
+  plugin: url
+  data_fetcher_plugin: file
+  data_parser_plugin: json
+  item_selector: items
+  urls:
+    - modules/custom/district_migrations/wangaratta_migration/content/images.json
+
+  ## Attributes are stored under the attribute prop, to access use json path, eg attributes.body
+  ## these are unique to the migration. See view a single parsed url in crawler for props available.
+  fields:
+    -
+      name: id
+      label: 'Unique ID'
+      selector: id
+    -
+      name: title
+      label: 'Title'
+      selector: title
+    -
+      name: alt
+      label: 'Alt'
+      selector: alt
+    -
+      name: filename
+      label: 'Filename'
+      selector: filename
+    -
+      name: uri
+      label: 'Uri'
+      selector: uri
+    -
+      name: type
+      label: 'Type'
+      selector: type
+
+## Processors use the fields above to map to Drupal fields.
+process:
+  bundle:
+    plugin: default_value
+    default_value: image
+  uid:
+    plugin: default_value
+    default_value: 1
+  name: filename
+  field_media_image:
+    plugin: image_import
+    source: uri
+    alt: filename
+    destination: 'public://images/'
+
+## Where to save.
+destination:
+  plugin: 'entity:media'
+  default_bundle: image

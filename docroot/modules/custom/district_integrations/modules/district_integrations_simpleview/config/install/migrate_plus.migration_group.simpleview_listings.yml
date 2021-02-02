@@ -1,0 +1,20 @@
+id: simpleview_listings
+label: Simpleview Listings
+description: Import Listings from Simpleview CRM
+
+shared_configuration:
+  migration_tags:
+    - simpleview_listings
+
+  source:
+    plugin: url
+    data_fetcher_plugin: simpleview_listings
+    data_parser_plugin: json
+    item_selector: DATA
+
+  dependencies:
+    enforced:
+      module:
+        - district_integrations_simpleview
+
+  migration_dependencies: {  }

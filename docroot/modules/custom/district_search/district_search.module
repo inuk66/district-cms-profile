@@ -1,0 +1,91 @@
+<?php
+
+/**
+ * @file
+ * Contains district_search.module.
+ */
+
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Template\Attribute;
+
+/**
+ * Implements hook_theme().
+ */
+function district_search_theme() {
+  return [
+    'district_search_toggle' => [
+      'variables' => [],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_preprocess_district_search_toggle().
+ *
+ * Apply default classes to the search toggle template.
+ *
+ * @param $variables
+ */
+function district_search_preprocess_district_search_toggle(&$variables) {
+  $variables['attributes']['class'][] = 'global-search__toggle';
+  $variables['attributes']['class'][] = 'js-global-search__toggle';
+  $variables['attributes']['role'] = 'switch';
+  $variables['attributes']['aria-checked'] = 'false';
+  $variables['attributes']['aria-label'] = 'toggle search input';
+  $variables['icon_attributes'] = new Attribute([
+    'class' => ['global-search__toggle-icon']
+  ]);
+}
+
+/**
+ * Implements hook_preprocess_block__views_exposed_filter_block().
+ *
+ * Looks for an exposed filter block that has the class "district-search-toggle"
+ * and applies the global search toggle functionality.
+ *
+ * @param $variables
+ */
+function district_search_preprocess_block__views_exposed_filter_block(&$variables) {
+  $has_class = !empty($variables['attributes']['class']);
+  if ($has_class && in_array('district-search-toggle', $variables['attributes']['class'])) {
+    $variables['attributes']['class'][] = 'global-search js-global-search';
+    $variables['#attached']['library'][] = 'district_search/global_search';
+    $variables['content']['#attributes']['class'][] = 'global-search__form';
+    $variables['content']['keys']['#attributes']['class'][] = 'global-search__input';
+    $variables['title_prefix'] = [
+      '#theme' => 'district_search_toggle',
+    ];
+  }
+}
+
+/**
+ * Implements hook_entity_view().
+ *
+ * TODO: Consider looking into a better way of doing this (avoiding empty
+ * search excerpts).
+ */
+function district_search_entity_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+  // Aviod blank search api excerpts.
+  $excerpt_component = $display->getComponent('search_api_excerpt');
+
+  // Build summary if possible.
+  $summary = '';
+  if ($entity->hasField('body')) {
+    $body = $entity->get('body');
+    $summary = strip_tags(text_summary($body->value, $body->format, 350)) . '...';
+  }
+
+  // If exceprt missing but we have a summary, use that instead.
+  if ($excerpt_component !== NULL && !isset($build['#search_api_excerpt']) && !empty($summary)) {
+    if (empty($build['search_api_excerpt']['#markup'])) {
+      $build['search_api_excerpt'] = [
+        '#type' => 'markup',
+        '#markup' => '<p>' . $summary . '</p>',
+        '#cache' => [
+          'contexts' => ['url.query_args']
+        ],
+      ];
+    }
+  }
+}

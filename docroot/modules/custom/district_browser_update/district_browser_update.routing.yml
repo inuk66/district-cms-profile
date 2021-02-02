@@ -1,0 +1,7 @@
+district_browser_update.settings_form:
+  path: '/admin/config/district/browser-update-settings'
+  defaults:
+    _title: 'District Browser Update Settings'
+    _form: 'Drupal\district_browser_update\Form\DistrictBrowserUpdateSettingsForm'
+  requirements:
+    _permission: 'administer district browser_update'

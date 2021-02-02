@@ -1,0 +1,86 @@
+id: crawler_pages
+label: Crawler Pages
+migration_group: crawler_migrate
+
+## Source is largely defined by this module. See configuration for more options. Here you
+## only need to specify `plugin: crawler`.
+source:
+  plugin: url
+  data_fetcher_plugin: file
+  data_parser_plugin: json
+  item_selector: items
+  urls:
+    - modules/custom/district_migrations/wangaratta_migration/content/pages.json
+
+  ## Attributes are stored under the attribute prop, to access use json path, eg attributes.body
+  ## these are unique to the migration. See view a single parsed url in crawler for props available.
+  fields:
+    -
+      name: id
+      label: 'Unique ID'
+      selector: id
+    -
+      name: title
+      label: 'Title'
+      selector: attributes/title
+    -
+      name: body
+      label: 'Body'
+      selector: attributes/body
+    -
+      name: content_type
+      label: 'Content type'
+      selector: attributes/content_type
+    -
+      name: images
+      label: 'Images'
+      selector: attributes/images
+    -
+      name: image
+      label: 'Image'
+      selector: attributes/image
+    -
+      name: path
+      label: 'Path (alias)'
+      selector: url/path
+
+## Processors use the fields above to map to Drupal fields.
+process:
+  type:
+    plugin: default_value
+    default_value: landing_page
+  id: id
+  title: title
+  body/value: body
+  body/format:
+    plugin: default_value
+    default_value: full_html # Use "rich_text" for govCMS
+  field_image:
+    plugin: entity_lookup
+    entity_type: media
+    bundle: image
+    source: image
+    ignore_case: true
+    value_key: name
+  sticky:
+    plugin: default_value
+    default_value: 0
+  moderation_state:
+    plugin: default_value
+    default_value: 'published'
+  uid:
+    plugin: default_value
+    default_value: 1
+  path/pathauto:
+    plugin: default_value
+    default_value: 0
+  path/alias: path
+
+## Where to save.
+destination:
+  plugin: 'entity:node'
+  default_bundle: page
+
+migration_dependencies:
+  required:
+    - images

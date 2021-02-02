@@ -1,0 +1,14 @@
+name: Wangaratta Crawler Migration
+type: module
+description: Migrate content from wangaratta site via crawler.
+core: 8.x
+version: 8.x-1.0
+package: Doghouse
+dependencies:
+  - crawler_migrate:crawler_migrate
+
+# To re-import below migrations/configs run `drush cdi crawler_migrate`
+config_devel:
+  install:
+    - migrate_plus.migration.crawler_images
+    - migrate_plus.migration.crawler_pages

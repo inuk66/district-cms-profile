@@ -1,0 +1,79 @@
+id: atdw_products
+label: ATDW Products
+description: Import products from ATDW API
+
+shared_configuration:
+  migration_tags:
+    - atdw_products
+
+  source:
+    plugin: url
+    data_fetcher_plugin: atdw_products # Where the magic happens.
+    data_parser_plugin: json
+    item_selector: products
+
+    high_water_property:
+      name: productUpdateDate
+
+    constants:
+      atdw_images_dir: 'public://atdw-images/'
+
+    fields:
+      - name: id
+        label: 'Unique ID'
+        selector: productId
+      - name: title
+        label: 'Title'
+        selector: productName
+      - name: body
+        label: 'Body'
+        selector: productDescription
+      - name: image
+        label: 'Image'
+        selector: productImage
+      - name: coordinates
+        label: 'Coordinates'
+        selector: boundary
+      - name: address_line_1
+        label: 'Address line 1'
+        selector: addresses/0/address_line
+      - name: address_line_2
+        label: 'Address line 2'
+        selector: addresses/0/address_line2
+      - name: suburb
+        label: 'Suburb'
+        selector: addresses/0/city
+      - name: postcode
+        label: 'Postcode'
+        selector: addresses/0/postcode
+      - name: state
+        label: 'State'
+        selector: addresses/0/state
+      - name: category
+        label: 'Category'
+        selector: productCategoryDescription
+      - name: email
+        label: 'Email'
+        selector: comms_em
+      - name: phone
+        label: 'Phone'
+        selector: comms_ph
+      - name: url
+        label: 'Url'
+        selector: comms_url
+      - name: booking_url
+        label: 'Booking URL'
+        selector: comms_burl
+      - name: event_dates
+        label: 'Event dates'
+        selector: eventDates
+      - name: classifications
+        label: 'Classifications'
+        selector: classifications
+
+  dependencies:
+    enforced:
+      module:
+        - district_integrations_atdw
+
+  migration_dependencies: {  }
