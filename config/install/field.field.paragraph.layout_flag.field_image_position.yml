@@ -6,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.layout_flag
   module:
     - options
-_core:
-  default_config_hash: QRh5nF0EAz3wYHR6NDtXU-dpOck7F6zKOya7KLPeNLY
 id: paragraph.layout_flag.field_image_position
 field_name: field_image_position
 entity_type: paragraph

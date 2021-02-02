@@ -9,8 +9,6 @@ dependencies:
   module:
     - entity_reference_revisions
     - text
-_core:
-  default_config_hash: b8dr_mypkYpJ6mbBcXFaV54gmTecxcxqFTBpm-aI-sw
 id: paragraph.multi_column.default
 targetEntityType: paragraph
 bundle: multi_column

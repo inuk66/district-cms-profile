@@ -12,8 +12,6 @@ dependencies:
     - entity_browser
     - link
     - text
-_core:
-  default_config_hash: MK-QgJVi_jGqbzOfkB_DPt4tn8czPZv5Yj1xoqi8jBk
 id: paragraph.text_on_image.default
 targetEntityType: paragraph
 bundle: text_on_image

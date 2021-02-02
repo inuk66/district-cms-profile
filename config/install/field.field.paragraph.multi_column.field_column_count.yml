@@ -6,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.multi_column
   module:
     - options
-_core:
-  default_config_hash: aLqGiSviVEMfJTaPTcVH12QBLywREJPJmD_d6ViYXvo
 id: paragraph.multi_column.field_column_count
 field_name: field_column_count
 entity_type: paragraph

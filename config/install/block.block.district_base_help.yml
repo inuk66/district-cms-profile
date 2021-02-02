@@ -5,8 +5,6 @@ dependencies:
     - help
   theme:
     - district_base
-_core:
-  default_config_hash: gpzWBQ35JjC15I6yHaBYlLpQl57k6rKYL-KTsSvPV3A
 id: district_base_help
 theme: district_base
 region: help

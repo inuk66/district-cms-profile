@@ -80,8 +80,6 @@ third_party_settings:
     custom: false
     allow: false
     default: default
-_core:
-  default_config_hash: jpHK2GJOG1smncyP_ckyAFdNGkH2diSO-BFPrgXr64I
 id: node.article.teaser_mini
 targetEntityType: node
 bundle: article

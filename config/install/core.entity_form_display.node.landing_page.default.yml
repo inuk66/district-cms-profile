@@ -67,8 +67,6 @@ third_party_settings:
         formatter: closed
         required_fields: true
       label: SEO
-_core:
-  default_config_hash: eVS58GvCIpfBJqfnmU7HAsWnKpzl3zMrglOb2KR-9EM
 id: node.landing_page.default
 targetEntityType: node
 bundle: landing_page

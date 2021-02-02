@@ -4,8 +4,6 @@ dependencies:
   module:
     - options
     - paragraphs
-_core:
-  default_config_hash: sVBQCGbvfyafyghV4aCiEzerpHG6GHyBbOnREObLbF4
 id: paragraph.field_column_count
 field_name: field_column_count
 entity_type: paragraph

@@ -11,8 +11,6 @@ term_hierarchy: false
 absolute_paths: false
 hide_single_home_item: false
 title_from_page_when_available: true
-_core:
-  default_config_hash: mmRzotiiDIFi2Ozs3xKRCRENuR9Dpd6sXlXoaI8FNTo
 include_invalid_paths: false
 excluded_paths: ''
 replaced_titles: ''

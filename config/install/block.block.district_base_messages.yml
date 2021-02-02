@@ -5,8 +5,6 @@ dependencies:
     - system
   theme:
     - district_base
-_core:
-  default_config_hash: 5MNdk3fpMKx_xxBTcz2T11DL4XEU1H5SgHl8BsYdFsA
 id: district_base_messages
 theme: district_base
 region: highlighted

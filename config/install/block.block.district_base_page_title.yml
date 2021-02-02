@@ -3,8 +3,6 @@ status: true
 dependencies:
   theme:
     - district_base
-_core:
-  default_config_hash: 9-lykPafcaEKcHV2YD3UjxHDO_BMfmloxZGlC25ZS10
 id: district_base_page_title
 theme: district_base
 region: content

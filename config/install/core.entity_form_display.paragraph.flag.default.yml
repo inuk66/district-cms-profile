@@ -15,8 +15,6 @@ dependencies:
     - iframe
     - link
     - text
-_core:
-  default_config_hash: icbXmQplhahZso84orLnPd_wOyNx5pAqYrNGglZRF3U
 id: paragraph.flag.default
 targetEntityType: paragraph
 bundle: flag

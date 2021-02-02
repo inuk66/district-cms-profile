@@ -1,5 +1,3 @@
 show_on_admin: 0
 alert_styles: "primary|Default\r\nerror|Error\r\nstatus|Status\r\nwarning|Warning"
 refresh_interval: '600'
-_core:
-  default_config_hash: YEjSLd1HQIdOiDkPxqaz7CqyvZrtIEUc3brlRw2RxWM

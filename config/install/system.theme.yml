@@ -1,4 +1,2 @@
 admin: gin
 default: district_base
-_core:
-  default_config_hash: 60CT9Q7hCWgbFyOMZzKtw3lPzis-mKH2fQrWK2zgvTA

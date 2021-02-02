@@ -1,8 +1,6 @@
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: 8OcOnIEDRX_MXtnChlh1JP2k9501g5klqafyBM8eYHs
 id: basic_content
 label: 'Basic Content'
 icon_uuid: null

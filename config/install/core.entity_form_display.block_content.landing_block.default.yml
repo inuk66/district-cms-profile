@@ -8,8 +8,6 @@ dependencies:
   module:
     - paragraphs
     - text
-_core:
-  default_config_hash: U23aptOdlTK07r7rEZhTPUaOOSVGO0v7FNXZ7yrkxWI
 id: block_content.landing_block.default
 targetEntityType: block_content
 bundle: landing_block

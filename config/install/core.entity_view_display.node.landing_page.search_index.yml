@@ -85,8 +85,6 @@ third_party_settings:
             fis-def-at: false
             fi: false
             fi-def-at: false
-_core:
-  default_config_hash: svwlj7oPInED5T3Tau1maronHRRAfq617RXDi2uxOUk
 id: node.landing_page.search_index
 targetEntityType: node
 bundle: landing_page

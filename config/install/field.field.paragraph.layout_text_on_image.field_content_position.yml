@@ -6,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.layout_text_on_image
   module:
     - options
-_core:
-  default_config_hash: 9fQLMMDA5mgKplEwJ4h_g1sbP3bIww7OHgxQjg8C_dg
 id: paragraph.layout_text_on_image.field_content_position
 field_name: field_content_position
 entity_type: paragraph

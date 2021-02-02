@@ -41,8 +41,6 @@ third_party_settings:
       image:
         - field_media
         - field_iframe
-_core:
-  default_config_hash: pkuR7BpCkhx3QXJ-wi4o4SVLics0mjPNhaX0YEKOZwQ
 id: paragraph.flag.default
 targetEntityType: paragraph
 bundle: flag

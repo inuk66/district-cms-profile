@@ -6,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.card
   module:
     - link
-_core:
-  default_config_hash: mNxt1kM0yeTMKjQsbFP-ccfdRlTEpcrVZTSDu6cbsKI
 id: paragraph.card.field_link
 field_name: field_link
 entity_type: paragraph

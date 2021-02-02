@@ -6,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.flag
   module:
     - text
-_core:
-  default_config_hash: WAs_xUhvGs_AfGyr9toA9XrTU1-Yr-rcKgWbanMeauw
 id: paragraph.flag.field_body
 field_name: field_body
 entity_type: paragraph

@@ -5,8 +5,6 @@ dependencies:
     - system
   theme:
     - district_base
-_core:
-  default_config_hash: fRKXNB91UxDvEMkzCR8ZBsawfC6Fqbme2gtobei3gu4
 id: district_base_branding
 theme: district_base
 region: header

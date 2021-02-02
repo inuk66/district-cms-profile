@@ -1,8 +1,6 @@
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: q3SsxAhT3x8pIdD4dVHs3DcVvIZUC7pGbe0rxA6tH1M
 id: flag
 label: Flag
 icon_uuid: null

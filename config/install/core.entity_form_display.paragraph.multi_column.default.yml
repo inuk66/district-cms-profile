@@ -9,8 +9,6 @@ dependencies:
   module:
     - paragraphs
     - text
-_core:
-  default_config_hash: z1OXs6MYETbOLFJAT9Ac0mOsHl-vFjvKEzdkuMR0hZ0
 id: paragraph.multi_column.default
 targetEntityType: paragraph
 bundle: multi_column

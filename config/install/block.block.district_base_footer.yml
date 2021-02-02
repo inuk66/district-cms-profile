@@ -7,8 +7,6 @@ dependencies:
     - system
   theme:
     - district_base
-_core:
-  default_config_hash: MvMyGzPKBSKnThgB8MgIv1iMlPKPwECRi00ohxk5OMc
 id: district_base_footer
 theme: district_base
 region: top

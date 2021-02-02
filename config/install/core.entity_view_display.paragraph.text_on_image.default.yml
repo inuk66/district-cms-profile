@@ -37,8 +37,6 @@ third_party_settings:
         - field_link
       image:
         - field_media
-_core:
-  default_config_hash: 3EA6q_MTQxtZvudyg74_SDxc6AJzqhblpvO3MqvQo3o
 id: paragraph.text_on_image.default
 targetEntityType: paragraph
 bundle: text_on_image

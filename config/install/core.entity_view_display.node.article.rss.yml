@@ -18,8 +18,6 @@ third_party_settings:
     custom: false
     allow: false
     default: default
-_core:
-  default_config_hash: Z5pwtQ2r70iSAjgPqojC2XL9BtdRBTy8QDE8TiHoxeI
 id: node.article.rss
 targetEntityType: node
 bundle: article

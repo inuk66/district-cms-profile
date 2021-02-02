@@ -11,8 +11,6 @@ dependencies:
     - entity_browser
     - link
     - text
-_core:
-  default_config_hash: xWsPrMsKf3c6-EwHQEQTBuDBjYTlS9vGWVgbR2EsU-0
 id: paragraph.card.default
 targetEntityType: paragraph
 bundle: card

@@ -8,8 +8,6 @@ dependencies:
   module:
     - entity_reference_revisions
     - text
-_core:
-  default_config_hash: UNzMvRouHnYISf0PzcEitl12V8Cy8XRimkcN6YPv7TY
 id: block_content.landing_block.default
 targetEntityType: block_content
 bundle: landing_block

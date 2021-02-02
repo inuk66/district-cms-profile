@@ -6,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.card
   module:
     - text
-_core:
-  default_config_hash: 5AR5801_7vCryDlDVcAHlThSLq0kVT6cFbyIBqDAFa0
 id: paragraph.card.field_body
 field_name: field_body
 entity_type: paragraph

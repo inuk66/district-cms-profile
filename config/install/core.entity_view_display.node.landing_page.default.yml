@@ -47,8 +47,6 @@ third_party_settings:
         - field_tags
         - field_meta_tags
         - field_yoast_seo
-_core:
-  default_config_hash: svwlj7oPInED5T3Tau1maronHRRAfq617RXDi2uxOUk
 id: node.landing_page.default
 targetEntityType: node
 bundle: landing_page

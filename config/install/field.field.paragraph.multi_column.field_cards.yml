@@ -7,8 +7,6 @@ dependencies:
     - paragraphs.paragraphs_type.multi_column
   module:
     - entity_reference_revisions
-_core:
-  default_config_hash: kSXHaiNs-UffbacSXFoEO0Wet8W6sWZW4xUwAmwz2v0
 id: paragraph.multi_column.field_cards
 field_name: field_cards
 entity_type: paragraph

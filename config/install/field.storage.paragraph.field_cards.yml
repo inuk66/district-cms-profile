@@ -4,8 +4,6 @@ dependencies:
   module:
     - entity_reference_revisions
     - paragraphs
-_core:
-  default_config_hash: pyPHvkYHCHx1cJiizfzqImwfGR6MGauF5871WcdwAlg
 id: paragraph.field_cards
 field_name: field_cards
 entity_type: paragraph

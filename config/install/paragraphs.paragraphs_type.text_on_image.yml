@@ -1,8 +1,6 @@
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: lzo-yS0X2EwPW0PCxYmHnLcbL1NTGM1Zj1ujYYAhelE
 id: text_on_image
 label: 'Text on Image'
 icon_uuid: null

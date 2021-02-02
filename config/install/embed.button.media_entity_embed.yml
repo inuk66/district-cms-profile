@@ -6,8 +6,6 @@ dependencies:
   module:
     - entity_embed
     - media
-_core:
-  default_config_hash: uDFr71znDwk7GjuKOoGMVNXOEuC0_cse0NdhYARcWu0
 label: 'Media Entity Embed'
 id: media_entity_embed
 type_id: entity

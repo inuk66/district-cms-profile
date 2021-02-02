@@ -6,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.text_on_image
   module:
     - link
-_core:
-  default_config_hash: MD8shcFdfWe-5hP31xoTPBl2cwCAatp24EDQ8gneygY
 id: paragraph.text_on_image.field_link
 field_name: field_link
 entity_type: paragraph

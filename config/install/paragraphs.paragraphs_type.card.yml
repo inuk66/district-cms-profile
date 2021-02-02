@@ -1,8 +1,6 @@
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: wveAEIU5R78VRt_lPjgQBlLx1BtiaOyQ6gbmQeC-vvU
 id: card
 label: Card
 icon_uuid: null

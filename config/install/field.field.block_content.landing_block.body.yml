@@ -6,8 +6,6 @@ dependencies:
     - field.storage.block_content.body
   module:
     - text
-_core:
-  default_config_hash: WEfktpKhB7kM22yOT_ml5D4JbX2kxVR8QEDrjaHYz8Q
 id: block_content.landing_block.body
 field_name: body
 entity_type: block_content

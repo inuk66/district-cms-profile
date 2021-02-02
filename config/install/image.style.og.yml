@@ -4,8 +4,6 @@ dependencies: {  }
 name: og
 label: 'Open Graph Image (1200 x 630)'
 effects:
-  26c58bb6-ec06-40f5-9cd1-6d1ef3f1aa3e:
-    uuid: 26c58bb6-ec06-40f5-9cd1-6d1ef3f1aa3e
     id: image_scale_and_crop
     weight: 1
     data:

@@ -125,8 +125,6 @@ third_party_settings:
             fis-def-at: false
             fi: false
             fi-def-at: false
-_core:
-  default_config_hash: cv3BpTyAXf6pA-vz2W4Kaw1RsHWuTlrYrz1eLZr-jD0
 id: node.article.teaser
 targetEntityType: node
 bundle: article

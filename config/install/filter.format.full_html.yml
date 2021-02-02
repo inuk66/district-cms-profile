@@ -5,8 +5,6 @@ dependencies:
     - editor
     - media
     - token_filter
-_core:
-  default_config_hash: kzkIeCRShO6_zg0xVLXX6uob9-vyzmtdj-RmVjKsL9A
 name: 'Full HTML'
 format: full_html
 weight: 0

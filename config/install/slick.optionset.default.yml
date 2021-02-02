@@ -4,8 +4,6 @@ dependencies:
   enforced:
     module:
       - slick
-_core:
-  default_config_hash: WpWUAD3X2RwYxsRGzJeh2Imqi592ZcXwEkvcT4tgzQU
 id: default
 name: default
 label: Default

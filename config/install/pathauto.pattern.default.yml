@@ -3,8 +3,6 @@ status: true
 dependencies:
   module:
     - node
-_core:
-  default_config_hash: O9E6R_CJ-gUG9wCtxdWuDpSrifgeRcpVM-BZchbRolM
 id: default
 label: Default
 type: 'canonical_entities:node'

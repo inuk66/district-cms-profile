@@ -5,5 +5,3 @@ role_to_select:
   content_author: '0'
   content_approver: '0'
 registration_mode: user
-_core:
-  default_config_hash: o1wWkhSOJotsHFgvzESaUOiTWhLak62cKBDyEtewAIM

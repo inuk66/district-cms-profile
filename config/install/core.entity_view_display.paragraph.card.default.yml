@@ -41,8 +41,6 @@ third_party_settings:
         - field_body
       suffix:
         - field_link
-_core:
-  default_config_hash: nFN5_H2wX4leZpuiKm1eWL9iooXjYuOwAPeYh7i8nyY
 id: paragraph.card.default
 targetEntityType: paragraph
 bundle: card

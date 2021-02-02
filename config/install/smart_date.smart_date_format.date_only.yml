@@ -1,8 +1,6 @@
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: 2lDQhtFdrpVyQoSHubwnSaBArvJXueMiiwcJniRBEyk
 id: date_only
 label: 'Date Only'
 date_format: 'D, M j Y'

@@ -9,8 +9,6 @@ dependencies:
     - google_analytics_reports
     - user
     - vdfu
-_core:
-  default_config_hash: KxFwaGrOTF2085NLGRC_KEjyfV_3l0z5yEbCC_THFJo
 id: google_analytics_summary
 label: 'Google Analytics Summary'
 module: views

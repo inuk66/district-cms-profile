@@ -4,8 +4,6 @@ dependencies: {  }
 name: flag
 label: 'Flag (1200 x 780)'
 effects:
-  d887628f-e390-4eeb-b34f-8da287a384cf:
-    uuid: d887628f-e390-4eeb-b34f-8da287a384cf
     id: image_scale_and_crop
     weight: 1
     data:

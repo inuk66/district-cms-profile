@@ -18,8 +18,6 @@ dependencies:
     - paragraphs.paragraphs_type.webform
   module:
     - entity_reference_revisions
-_core:
-  default_config_hash: W0ZxP8FIRRMsJd2rZTM8IDZbxIzdLHZscOpZa7dmJCw
 id: node.landing_page.field_landing_content
 field_name: field_landing_content
 entity_type: node

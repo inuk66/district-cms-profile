@@ -4,8 +4,6 @@ dependencies:
   module:
     - google_analytics_reports
     - user
-_core:
-  default_config_hash: u6499D4WmLg1EJnJ6jmNSVaC1hIaTImEFVldhiwuNEo
 id: google_analytics_reports_page
 label: 'Google Analytics Reports Page'
 module: views

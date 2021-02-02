@@ -1,8 +1,6 @@
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: S7g57CsOI5MUGn-Jadv4Y0ezpO7WevHCOKlVuNecsc8
 id: multi_column
 label: 'Multi Column'
 icon_uuid: null

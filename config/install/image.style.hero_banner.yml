@@ -4,8 +4,6 @@ dependencies: {  }
 name: hero_banner
 label: 'Hero Banner (1200 x 500)'
 effects:
-  016d50d3-2f5f-45e9-bd47-5f169ff5c915:
-    uuid: 016d50d3-2f5f-45e9-bd47-5f169ff5c915
     id: image_scale_and_crop
     weight: 1
     data:

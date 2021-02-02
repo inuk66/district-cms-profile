@@ -5,8 +5,6 @@ dependencies:
     - block_content
     - entity_reference_revisions
     - paragraphs
-_core:
-  default_config_hash: ZwhGFP300l1G0k1Jbj3YRQ8FqRR9OugGSKBAKmoeqek
 id: block_content.field_landing_content
 field_name: field_landing_content
 entity_type: block_content

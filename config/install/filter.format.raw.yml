@@ -1,8 +1,6 @@
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: ZqKmocKUMM-F1z7Z79mAkTR-7Q5jKztscVsjk_cCaUs
 name: Raw
 format: raw
 weight: 10

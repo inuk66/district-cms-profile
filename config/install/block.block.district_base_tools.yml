@@ -7,8 +7,6 @@ dependencies:
     - system
   theme:
     - district_base
-_core:
-  default_config_hash: xCOijLdB1-UgXxQ9a0D1_pd8vxNEhfMnxXZc8jYhHjs
 id: district_base_tools
 theme: district_base
 region: sidebar_first

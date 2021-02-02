@@ -1,8 +1,6 @@
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: 9tPXnSvxaFBxdiQkvZZpU3OIFpU-AyFgeQSIPj2frXg
 id: default_bundle
 entity_type_id: null
 entity_id: null

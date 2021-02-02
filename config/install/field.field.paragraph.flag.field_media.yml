@@ -5,8 +5,6 @@ dependencies:
     - field.storage.paragraph.field_media
     - media.type.image
     - paragraphs.paragraphs_type.flag
-_core:
-  default_config_hash: t6XNdCBJpPhzVY-8ieC0wVpSmPeJzI9KK57Ze7K5dII
 id: paragraph.flag.field_media
 field_name: field_media
 entity_type: paragraph

@@ -12,8 +12,6 @@ third_party_settings:
     enabled: null
     host: ''
     port: ''
-_core:
-  default_config_hash: CEHTCpo0zzrZOJNa9_M2R_HdYKrq3v1zlRVCf66hh7U
 features:
   node_user_picture: true
   comment_user_picture: true

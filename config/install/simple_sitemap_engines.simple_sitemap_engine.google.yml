@@ -1,8 +1,6 @@
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: d3j2A7gQx6Ssh5UgcIHLBmHVEb34W43QKfgLWmV7QkU
 id: google
 label: Google
 url: 'http://www.google.com/ping?sitemap=[sitemap]'
