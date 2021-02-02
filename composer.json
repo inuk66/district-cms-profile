@@ -9,21 +9,26 @@
             "role": "developer"
         }
     ],
-    "repositories": {
-        "0": {
+    "repositories": [
+        {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
         },
-        "doghouse": {
+        {
             "type": "composer",
             "url": "https://packages.doghouse.agency/"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:inuk66/district-base.git"
         }
-    },
+    ],
     "require": {
         "php": ">=7.0.8",
         "ext-json": "*",
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6.5",
+        "doghouse/district-base": "dev-main",
         "doghouse/district_components": "1.*",
         "doghouse/doghouse-standard-profile": "8.9.x",
         "doghouse/doghouse_background_image": "dev-master",

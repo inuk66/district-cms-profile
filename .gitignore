@@ -2,8 +2,17 @@
 # JetBrains IDEs files
 # --------------------
 
+# Commposer download locations.
+/bin
+/docroot
+/vendor
+
 # Project settings.
 .idea/
+
+# Git files
+.editorconfig
+.gitattributes
 
 # --------------------
 # SublimeText files
