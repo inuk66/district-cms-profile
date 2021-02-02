@@ -132,14 +132,6 @@
         "sort-packages": true,
         "bin-dir": "bin"
     },
-    "autoload": {
-        "classmap": [
-            "scripts/composer/ScriptHandler.php"
-        ],
-        "files": [
-            "load.environment.php"
-        ]
-    },
     "extra": {
         "composer-exit-on-patch-failure": true,
         "patchLevel": {
