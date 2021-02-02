@@ -1,0 +1,15 @@
+uuid: 305ca358-fda5-4b26-9ffe-f42158503ce3
+langcode: en
+status: true
+dependencies: {  }
+name: og
+label: 'Open Graph Image (1200 x 630)'
+effects:
+  26c58bb6-ec06-40f5-9cd1-6d1ef3f1aa3e:
+    uuid: 26c58bb6-ec06-40f5-9cd1-6d1ef3f1aa3e
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1200
+      height: 630
+      anchor: center-center

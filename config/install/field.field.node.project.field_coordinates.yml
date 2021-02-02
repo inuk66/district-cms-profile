@@ -1,0 +1,22 @@
+uuid: e96d2f90-d5e0-4a63-8671-f0533af8730d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_coordinates
+    - node.type.project
+  module:
+    - geofield
+id: node.project.field_coordinates
+field_name: field_coordinates
+entity_type: node
+bundle: project
+label: coordinates
+description: 'Geographical coordinates for this location, required to display this location on maps'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  backend: geofield_backend_default
+field_type: geofield

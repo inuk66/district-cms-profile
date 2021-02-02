@@ -1,0 +1,48 @@
+uuid: cce621f9-3acc-4c27-83ad-7bf2b711f6d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_address
+    - node.type.business
+  module:
+    - address
+id: node.business.field_address
+field_name: field_address
+entity_type: node
+bundle: business
+label: Address
+description: 'Address for this business'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries:
+    AU: AU
+  langcode_override: ''
+  field_overrides:
+    givenName:
+      override: hidden
+    additionalName:
+      override: hidden
+    familyName:
+      override: hidden
+    organization:
+      override: hidden
+    addressLine1:
+      override: required
+    addressLine2:
+      override: optional
+    postalCode:
+      override: optional
+    sortingCode:
+      override: hidden
+    dependentLocality:
+      override: optional
+    locality:
+      override: optional
+    administrativeArea:
+      override: required
+  fields: {  }
+field_type: address

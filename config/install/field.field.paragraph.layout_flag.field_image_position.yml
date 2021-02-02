@@ -1,0 +1,25 @@
+uuid: b5059bcf-cb84-4bdd-aa56-ffcc7cb7a203
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_position
+    - paragraphs.paragraphs_type.layout_flag
+  module:
+    - options
+_core:
+  default_config_hash: QRh5nF0EAz3wYHR6NDtXU-dpOck7F6zKOya7KLPeNLY
+id: paragraph.layout_flag.field_image_position
+field_name: field_image_position
+entity_type: paragraph
+bundle: layout_flag
+label: 'Image position'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: left
+default_value_callback: ''
+settings: {  }
+field_type: list_string

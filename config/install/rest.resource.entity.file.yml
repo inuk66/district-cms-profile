@@ -1,0 +1,21 @@
+uuid: e49ad7dd-602f-4f0d-a4e7-41c164eb06c7
+langcode: en
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - file
+    - hal
+id: entity.file
+plugin_id: 'entity:file'
+granularity: resource
+configuration:
+  methods:
+    - GET
+    - POST
+    - DELETE
+    - PATCH
+  formats:
+    - hal_json
+  authentication:
+    - basic_auth

@@ -1,0 +1,35 @@
+uuid: 1f76baa0-c90d-4ed4-ad6d-5a555270f20c
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+_core:
+  default_config_hash: sVBQCGbvfyafyghV4aCiEzerpHG6GHyBbOnREObLbF4
+id: paragraph.field_column_count
+field_name: field_column_count
+entity_type: paragraph
+type: list_integer
+settings:
+  allowed_values:
+    -
+      value: 2
+      label: '2 Column'
+    -
+      value: 3
+      label: '3 Column'
+    -
+      value: 4
+      label: '4 Column'
+    -
+      value: 5
+      label: '5 Column'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

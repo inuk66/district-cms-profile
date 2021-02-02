@@ -1,0 +1,30 @@
+uuid: 02281a0a-d9de-4785-8cf8-a927dff66548
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_iframe
+    - paragraphs.paragraphs_type.flag
+  module:
+    - iframe
+id: paragraph.flag.field_iframe
+field_name: field_iframe
+entity_type: paragraph
+bundle: flag
+label: 'Embed content'
+description: 'Embed an external website in place of where the image would be'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  class: 'district-iframe district-iframe--flag'
+  frameborder: '0'
+  scrolling: auto
+  transparency: '0'
+  allowfullscreen: '0'
+  tokensupport: '2'
+  title: null
+  height: null
+  width: null
+field_type: iframe

@@ -1,0 +1,52 @@
+uuid: 563894e8-611a-406f-a401-33c86a464919
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact
+    - node.type.location
+    - paragraphs.paragraphs_type.contact
+  module:
+    - entity_reference_revisions
+id: node.location.field_contact
+field_name: field_contact
+entity_type: node
+bundle: location
+label: Contact
+description: 'Add one or more contacts for this location'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      contact: contact
+    target_bundles_drag_drop:
+      basic_content:
+        weight: 9
+        enabled: false
+      card:
+        weight: 10
+        enabled: false
+      contact:
+        enabled: true
+        weight: 11
+      flag:
+        weight: 12
+        enabled: false
+      link:
+        weight: 15
+        enabled: false
+      links:
+        weight: 16
+        enabled: false
+      multi_column:
+        weight: 13
+        enabled: false
+      text_on_image:
+        weight: 14
+        enabled: false
+field_type: entity_reference_revisions

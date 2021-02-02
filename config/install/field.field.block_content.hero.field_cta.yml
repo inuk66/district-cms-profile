@@ -1,0 +1,23 @@
+uuid: 53e8f593-6fff-4ce4-9b05-dda97cbca91e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero
+    - field.storage.block_content.field_cta
+  module:
+    - link
+id: block_content.hero.field_cta
+field_name: field_cta
+entity_type: block_content
+bundle: hero
+label: CTA
+description: 'Display an optional link in the hero banner.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

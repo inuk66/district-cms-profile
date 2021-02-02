@@ -1,0 +1,9 @@
+uuid: 268f6e3e-392a-4acf-9ced-41e2ecbfa1eb
+langcode: en
+status: true
+dependencies: {  }
+id: resident
+label: Resident
+weight: 3
+is_admin: null
+permissions: {  }

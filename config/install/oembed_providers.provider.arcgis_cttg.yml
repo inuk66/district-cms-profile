@@ -1,0 +1,16 @@
+uuid: aea4d9f5-5e75-42e3-b3b7-0200416242fc
+langcode: en
+status: true
+dependencies: {  }
+id: arcgis_cttg
+label: 'ArcGis CTTG'
+provider_url: 'https://cttg.maps.arcgis.com/'
+endpoints:
+  -
+    schemes:
+      - 'https://cttg.maps.arcgis.com/*'
+    url: 'http://oembed.doghouse.agency'
+    discovery: false
+    formats:
+      json: true
+      xml: false

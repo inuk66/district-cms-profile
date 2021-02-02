@@ -1,0 +1,15 @@
+uuid: 894ce885-2e8e-473b-93e3-f737e2843267
+langcode: en
+status: true
+dependencies: {  }
+name: banner
+label: 'Banner (1200 x 400)'
+effects:
+  8382c9af-0c22-44b2-82dc-5336fe292335:
+    uuid: 8382c9af-0c22-44b2-82dc-5336fe292335
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1200
+      height: 400
+      anchor: center-center

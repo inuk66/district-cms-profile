@@ -1,0 +1,17 @@
+uuid: 580f379e-4ff0-42ce-a8ce-ebbf776ba78d
+langcode: en
+status: true
+dependencies:
+  module:
+    - search_api_db
+id: database
+name: Database
+description: 'This is only used during initial development, should be exchanged with Elastic'
+backend: search_api_db
+backend_config:
+  database: 'default:default'
+  min_chars: 3
+  matching: partial
+  autocomplete:
+    suggest_suffix: true
+    suggest_words: true

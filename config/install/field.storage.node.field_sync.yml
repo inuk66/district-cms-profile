@@ -1,0 +1,19 @@
+uuid: 456874dc-4943-4b08-864a-a90b330e18b7
+langcode: en
+status: true
+dependencies:
+  module:
+    - district_push
+    - node
+id: node.field_sync
+field_name: field_sync
+entity_type: node
+type: district_push_syncstate
+settings: {  }
+module: district_push
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

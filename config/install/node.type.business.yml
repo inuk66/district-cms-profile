@@ -1,0 +1,17 @@
+uuid: d95b654e-58d5-4008-8379-980f89d343f8
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Business
+type: business
+description: 'Content to display business information. This content will be listed in a business directory.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

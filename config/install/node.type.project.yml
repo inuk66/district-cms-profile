@@ -1,0 +1,17 @@
+uuid: 30dfdf30-7671-45ba-a42d-cb767f65328e
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Project
+type: project
+description: 'underway or upcoming projects in the community'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

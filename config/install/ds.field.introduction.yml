@@ -1,0 +1,11 @@
+id: introduction
+label: Introduction
+ui_limit: user|default
+properties:
+  content:
+    value: "<h3>Your dashboard</h3>\r\n\r\n<p><span style=\"color: var(--colorGinText);\">Welcome to your user dashboard, here you can select your preferences and easily access council services. You can change you preferences by clicking the edit tab.</span></p>\r\n\r\n<p>Below you can select from common council services, alternatively you can <a href=\"/contact\">contact us</a> to get further help</p>\r\n\r\n<h4>Services</h4>\r\n"
+    format: full_html
+type: token
+type_label: 'Token field'
+entities:
+  user: user

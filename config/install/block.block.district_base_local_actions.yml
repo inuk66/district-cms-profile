@@ -1,0 +1,20 @@
+uuid: e7abd601-e56d-4176-a471-8f8adfb4f405
+langcode: en
+status: true
+dependencies:
+  theme:
+    - district_base
+_core:
+  default_config_hash: k-gCvi56Kz3gfw5nv_Ysnw31OCqAOoavsSwpzvQSiJs
+id: district_base_local_actions
+theme: district_base
+region: content
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

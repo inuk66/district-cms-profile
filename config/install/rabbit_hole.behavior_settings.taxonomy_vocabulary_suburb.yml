@@ -1,0 +1,14 @@
+uuid: df3d3e71-3043-4a98-9fec-5a8373c1042d
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.suburb
+id: taxonomy_vocabulary_suburb
+entity_type_id: null
+entity_id: null
+action: page_redirect
+allow_override: 1
+redirect: '/search?keys=[term:name]'
+redirect_code: 301
+redirect_fallback_action: null

@@ -1,0 +1,21 @@
+uuid: d26c5f9f-3c21-4dc8-8709-7a6f56b5e04f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_overridden
+    - node.type.event
+  module:
+    - district_push
+id: node.event.field_overridden
+field_name: field_overridden
+entity_type: node
+bundle: event
+label: Overridden
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: district_push_overridden

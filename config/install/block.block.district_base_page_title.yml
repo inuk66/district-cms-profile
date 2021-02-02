@@ -1,0 +1,20 @@
+uuid: d7b15fbf-ae7a-4f2c-a11a-7eb3ff07df51
+langcode: en
+status: true
+dependencies:
+  theme:
+    - district_base
+_core:
+  default_config_hash: 9-lykPafcaEKcHV2YD3UjxHDO_BMfmloxZGlC25ZS10
+id: district_base_page_title
+theme: district_base
+region: content
+weight: -50
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

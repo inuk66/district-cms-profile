@@ -1,0 +1,25 @@
+uuid: 451fbe8a-868a-4675-8cda-3136b38b79f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link
+    - paragraphs.paragraphs_type.text_on_image
+  module:
+    - link
+_core:
+  default_config_hash: MD8shcFdfWe-5hP31xoTPBl2cwCAatp24EDQ8gneygY
+id: paragraph.text_on_image.field_link
+field_name: field_link
+entity_type: paragraph
+bundle: text_on_image
+label: Link
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

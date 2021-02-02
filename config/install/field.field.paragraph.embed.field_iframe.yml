@@ -1,0 +1,30 @@
+uuid: 28ac2c0d-8157-41c9-8ce3-dd83e574f835
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_iframe
+    - paragraphs.paragraphs_type.embed
+  module:
+    - iframe
+id: paragraph.embed.field_iframe
+field_name: field_iframe
+entity_type: paragraph
+bundle: embed
+label: 'Embed URL'
+description: 'Embed content from an external website in the page. Eg videos, maps, etc'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  class: district-iframe
+  frameborder: '0'
+  scrolling: auto
+  transparency: '1'
+  allowfullscreen: '0'
+  tokensupport: '2'
+  title: null
+  height: null
+  width: null
+field_type: iframe

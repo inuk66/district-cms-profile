@@ -1,0 +1,21 @@
+uuid: 231e3b8d-8552-4f58-853e-56ef7ac314a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_hub
+    - node.type.event
+  module:
+    - district_push
+id: node.event.field_content_hub
+field_name: field_content_hub
+entity_type: node
+bundle: event
+label: 'Content Hub'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: district_push_hub

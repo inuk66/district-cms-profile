@@ -1,0 +1,23 @@
+uuid: 1a552331-29ca-49ef-923c-c6a0dd5b5395
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_website
+    - node.type.business
+  module:
+    - link
+id: node.business.field_website
+field_name: field_website
+entity_type: node
+bundle: business
+label: Website
+description: 'Website for this business'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

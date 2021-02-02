@@ -1,0 +1,10 @@
+uuid: d7bca76d-ba3a-488e-81f5-be50beada1c7
+langcode: en
+status: true
+dependencies: {  }
+id: layout_text_on_image
+label: 'Layout: Text on Image (TO BE DELETED)'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

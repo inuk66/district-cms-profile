@@ -1,0 +1,40 @@
+uuid: 27c903e9-5db7-466f-90e2-f42d413f05a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.sitewide
+    - views.view.search
+  module:
+    - views
+    - search_api_autocomplete
+id: search
+label: Search
+index_id: sitewide
+suggester_settings:
+  live_results:
+    fields:
+      - title
+    view_modes:
+      'entity:node':
+        article: ''
+        business: ''
+        event: ''
+        landing_page: ''
+        location: ''
+        page: ''
+suggester_weights:
+  live_results: 0
+suggester_limits: {  }
+search_settings:
+  'views:search':
+    displays:
+      default: true
+      selected: {  }
+options:
+  limit: 10
+  min_length: 1
+  show_count: false
+  autosubmit: true
+  submit_button_selector: ':submit'
+  delay: null

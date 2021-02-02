@@ -1,0 +1,8 @@
+uuid: 49808f5a-ad93-4d8d-826d-3ed15f4a3287
+langcode: en
+status: true
+dependencies: {  }
+id: human_date
+label: 'Human Date'
+locked: false
+pattern: 'jS M Y'

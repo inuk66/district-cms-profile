@@ -1,0 +1,8 @@
+uuid: db2e062a-f94d-4c45-9576-a22af32f475f
+langcode: en
+status: true
+dependencies: {  }
+id: hero
+label: Hero
+revision: 1
+description: 'A Hero section generally features at the top of a page featuring large imagery.'

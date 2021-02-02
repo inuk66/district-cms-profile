@@ -1,0 +1,25 @@
+uuid: 8b037e01-90a1-4e58-b3d5-9ce6ebc613ec
+langcode: en
+status: true
+dependencies: {  }
+id: 9577686bca
+name: 'Lagoon Varnish'
+invalidationtype: tag
+hostname: varnish
+port: 80
+path: /
+request_method: BAN
+scheme: http
+verify: '1'
+headers:
+  -
+    field: Cache-Tags
+    value: '[invalidations:separated_pipe]'
+body: null
+body_content_type: null
+runtime_measurement: true
+timeout: !!float 60
+connect_timeout: !!float 60
+cooldown_time: !!float 0
+max_requests: 100
+http_errors: true

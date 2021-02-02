@@ -1,0 +1,14 @@
+uuid: 8c6f824a-46d9-407b-b52d-b4deadb8444d
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.business
+  module:
+    - user
+id: user_remove_role_action.business
+label: 'Remove the Business role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: business

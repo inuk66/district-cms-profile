@@ -1,0 +1,12 @@
+uuid: 979f29eb-cf26-4a4a-89a4-07f0863d587f
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 8OcOnIEDRX_MXtnChlh1JP2k9501g5klqafyBM8eYHs
+id: basic_content
+label: 'Basic Content'
+icon_uuid: null
+icon_default: null
+description: 'Basic content includes only a rich text editor.'
+behavior_plugins: {  }

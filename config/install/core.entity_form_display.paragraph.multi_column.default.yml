@@ -1,0 +1,48 @@
+uuid: e5aa0048-585d-4a55-9431-7623ef59de25
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.multi_column.field_body
+    - field.field.paragraph.multi_column.field_cards
+    - field.field.paragraph.multi_column.field_column_count
+    - paragraphs.paragraphs_type.multi_column
+  module:
+    - paragraphs
+    - text
+_core:
+  default_config_hash: z1OXs6MYETbOLFJAT9Ac0mOsHl-vFjvKEzdkuMR0hZ0
+id: paragraph.multi_column.default
+targetEntityType: paragraph
+bundle: multi_column
+mode: default
+content:
+  field_body:
+    weight: 0
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_cards:
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+  field_column_count:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true

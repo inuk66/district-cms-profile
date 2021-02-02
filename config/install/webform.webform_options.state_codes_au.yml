@@ -1,0 +1,9 @@
+uuid: c2461056-cb3e-4a9a-8250-2026a868c9c9
+langcode: en
+status: true
+dependencies: {  }
+id: state_codes_au
+label: 'State Codes (AU)'
+category: Geographic
+likert: false
+options: "ACT: 'Australian Capital Territory'\nJBT: 'Jervis Bay Territory'\nNSW: 'New South Wales'\nNT: 'Northern Territory'\nQLD: Queensland\nSA: 'South Australia'\nTAS: Tasmania\nVIC: Victoria\nWA: 'Western Australia'"

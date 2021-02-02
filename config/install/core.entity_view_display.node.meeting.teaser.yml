@@ -1,0 +1,38 @@
+uuid: ca06f098-851c-4a7c-96e2-0e73ef5e7fb9
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.meeting.body
+    - field.field.node.meeting.field_date
+    - field.field.node.meeting.field_meeting_agenda
+    - field.field.node.meeting.field_meeting_minutes
+    - node.type.meeting
+  module:
+    - text
+    - user
+id: node.meeting.teaser
+targetEntityType: node
+bundle: meeting
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  anonymous_comments_login_link: true
+  field_date: true
+  field_meeting_agenda: true
+  field_meeting_minutes: true
+  search_api_excerpt: true

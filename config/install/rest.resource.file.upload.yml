@@ -1,0 +1,18 @@
+uuid: 558e911e-df97-4be3-9757-32dba6fa7eb9
+langcode: en
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - file
+    - hal
+id: file.upload
+plugin_id: 'file:upload'
+granularity: resource
+configuration:
+  methods:
+    - POST
+  formats:
+    - hal_json
+  authentication:
+    - basic_auth

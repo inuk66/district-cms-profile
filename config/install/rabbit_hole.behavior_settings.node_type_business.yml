@@ -1,0 +1,14 @@
+uuid: 42b9e8ed-6736-467f-a57e-f488fc71fa4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.business
+id: node_type_business
+entity_type_id: null
+entity_id: null
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: null

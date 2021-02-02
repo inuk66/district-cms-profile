@@ -1,0 +1,85 @@
+uuid: cb96d12d-ec8d-48a1-b733-408da75bd53b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_landing_content
+    - node.type.project
+    - paragraphs.paragraphs_type.accordion
+    - paragraphs.paragraphs_type.basic_content
+    - paragraphs.paragraphs_type.carousel
+    - paragraphs.paragraphs_type.downloads
+    - paragraphs.paragraphs_type.links
+    - paragraphs.paragraphs_type.steps
+    - paragraphs.paragraphs_type.webform
+  module:
+    - entity_reference_revisions
+id: node.project.field_landing_content
+field_name: field_landing_content
+entity_type: node
+bundle: project
+label: 'Landing content'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      accordion: accordion
+      basic_content: basic_content
+      carousel: carousel
+      downloads: downloads
+      links: links
+      steps: steps
+      webform: webform
+    target_bundles_drag_drop:
+      accordion:
+        enabled: true
+        weight: 16
+      basic_content:
+        enabled: true
+        weight: 17
+      card:
+        weight: 18
+        enabled: false
+      carousel:
+        enabled: true
+        weight: 19
+      contact:
+        weight: 20
+        enabled: false
+      downloads:
+        enabled: true
+        weight: 21
+      featured_links:
+        weight: 22
+        enabled: false
+      flag:
+        weight: 23
+        enabled: false
+      link:
+        weight: 26
+        enabled: false
+      links:
+        enabled: true
+        weight: 27
+      multi_column:
+        weight: 24
+        enabled: false
+      steps:
+        enabled: true
+        weight: 28
+      text_on_image:
+        weight: 25
+        enabled: false
+      title_and_text:
+        weight: 29
+        enabled: false
+      webform:
+        enabled: true
+        weight: 30
+field_type: entity_reference_revisions

@@ -1,0 +1,18 @@
+uuid: 7fe871b4-689b-4a7f-af7c-fb790d37074d
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Meeting
+type: meeting
+description: 'For organising and and keeping track of meetings.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

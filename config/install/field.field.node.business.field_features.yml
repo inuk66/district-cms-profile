@@ -1,0 +1,19 @@
+uuid: dc16e44a-00b0-4947-a726-fb4e02ad1bc0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_features
+    - node.type.business
+id: node.business.field_features
+field_name: field_features
+entity_type: node
+bundle: business
+label: Facilities
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

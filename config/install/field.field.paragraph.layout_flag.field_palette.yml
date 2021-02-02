@@ -1,0 +1,21 @@
+uuid: 590e18b9-61a2-4433-a666-b92f73d8eaa2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_palette
+    - paragraphs.paragraphs_type.layout_flag
+  module:
+    - options
+id: paragraph.layout_flag.field_palette
+field_name: field_palette
+entity_type: paragraph
+bundle: layout_flag
+label: 'Colour Palette'
+description: 'Select a colour palette to use with this flag.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

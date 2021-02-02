@@ -1,0 +1,433 @@
+uuid: cb789fae-c8e8-41cc-9205-0f254db33795
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.event.body
+    - field.field.node.event.field_address
+    - field.field.node.event.field_content_hub
+    - field.field.node.event.field_coordinates
+    - field.field.node.event.field_dates
+    - field.field.node.event.field_image
+    - field.field.node.event.field_location
+    - field.field.node.event.field_meta_tags
+    - field.field.node.event.field_overridden
+    - field.field.node.event.field_phone
+    - field.field.node.event.field_sync
+    - field.field.node.event.field_tags
+    - field.field.node.event.field_website
+    - field.field.node.event.field_yoast_seo
+    - node.type.event
+  module:
+    - address
+    - district_dates
+    - ds
+    - field_formatter_range
+    - field_group
+    - leaflet
+    - link
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: district_sidebar_right
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        wrappers:
+          main: div
+          sidebar: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      main:
+        - body
+        - group_address
+        - field_location
+        - field_address
+        - field_coordinates
+      sidebar:
+        - field_dates
+        - field_tags
+        - field_phone
+        - field_website
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+  field_group:
+    group_address:
+      children:
+        - field_address
+        - field_coordinates
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      region: main
+      format_settings:
+        id: ''
+        classes: 'address-map duk-mb--2'
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Address
+id: node.event.default
+targetEntityType: node
+bundle: event
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: About
+            prefix: ''
+            lbw: true
+            lbw-el: h3
+            lbw-cl: ''
+            lbw-at: ''
+            ow: true
+            ow-el: div
+            ow-cl: duk-mb--3
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    region: main
+  field_address:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: main
+  field_coordinates:
+    weight: 5
+    label: hidden
+    settings:
+      multiple_map: '0'
+      popup_content: ''
+      leaflet_map: 'OSM Mapnik'
+      height: '300'
+      height_unit: px
+      hide_empty_map: '1'
+      disable_wheel: '1'
+      fullscreen_control: '1'
+      reset_map:
+        position: topright
+        control: 0
+      map_position:
+        center:
+          lat: '0'
+          lon: '0'
+        zoom: '17'
+        minZoom: '1'
+        maxZoom: '18'
+        zoomFiner: '0'
+        force: 0
+      icon:
+        iconType: marker
+        iconUrl: ''
+        shadowUrl: ''
+        html: '<div></div>'
+        html_class: leaflet-map-divicon
+        circle_marker_options: '{"radius":100,"color":"red","fillColor":"#f03","fillOpacity":0.5}'
+        iconSize:
+          x: ''
+          'y': ''
+        iconAnchor:
+          x: ''
+          'y': ''
+        shadowSize:
+          x: ''
+          'y': ''
+        shadowAnchor:
+          x: ''
+          'y': ''
+        popupAnchor:
+          x: ''
+          'y': ''
+      leaflet_markercluster:
+        options: '{"spiderfyOnMaxZoom":true,"showCoverageOnHover":true,"removeOutsideVisibleBounds":false}'
+        control: 0
+      path: '{"color":"#3388ff","opacity":"1.0","stroke":true,"weight":3,"fill":"depends","fillColor":"*","fillOpacity":"0.2"}'
+      geocoder:
+        settings:
+          position: topright
+          input_size: '25'
+          min_terms: '4'
+          delay: '800'
+          zoom: '16'
+          options: ''
+          popup: 0
+        control: 0
+      popup: 0
+      gesture_handling: 0
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    type: leaflet_formatter_default
+    region: main
+  field_dates:
+    weight: 3
+    label: above
+    settings:
+      timezone_override: ''
+      format: compact
+      export_to_calendar: '1'
+      force_chronological: 0
+      format_type: medium
+    third_party_settings:
+      field_formatter_range:
+        limit: 0
+        offset: 0
+        reverse: false
+      ds:
+        ds_limit: ''
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw: true
+            lbw-el: h4
+            lbw-cl: ''
+            lbw-at: ''
+            ow: true
+            ow-el: div
+            ow-cl: 'duk-mt--2 duk-mb--2 sidebar-date-list'
+            ow-at: ''
+            fis: true
+            fis-el: ul
+            fis-cl: js-limit-items
+            fis-at: 'data-label="More"'
+            fi: true
+            fi-el: li
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis-def-at: false
+            fi-def-at: false
+    type: future_dates_formatter
+    region: sidebar
+  field_location:
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: teaser_large
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw: true
+            lbw-el: h4
+            lbw-cl: ''
+            lbw-at: ''
+            ow: true
+            ow-el: div
+            ow-cl: duk-mb--2
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    type: entity_reference_entity_view
+    region: main
+  field_phone:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw: true
+            lbw-el: h4
+            lbw-cl: ''
+            lbw-at: ''
+            ow: true
+            ow-el: div
+            ow-cl: duk-mb--2
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    type: string
+    region: sidebar
+  field_tags:
+    weight: 4
+    label: above
+    settings:
+      link: true
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw: true
+            lbw-el: h4
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis: true
+            fis-el: ul
+            fis-cl: tags
+            fis-at: ''
+            fi: true
+            fi-el: li
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis-def-at: false
+            fi-def-at: false
+    type: entity_reference_label
+    region: sidebar
+  field_website:
+    weight: 6
+    label: above
+    settings:
+      trim_length: 50
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw: true
+            lbw-el: h4
+            lbw-cl: ''
+            lbw-at: ''
+            ow: true
+            ow-el: div
+            ow-cl: duk-mb--2
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    type: link
+    region: sidebar
+hidden:
+  anonymous_comments_login_link: true
+  content_moderation_control: true
+  field_content_hub: true
+  field_image: true
+  field_meta_tags: true
+  field_overridden: true
+  field_sync: true
+  field_yoast_seo: true
+  links: true
+  search_api_excerpt: true

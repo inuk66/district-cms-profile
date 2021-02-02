@@ -1,0 +1,14 @@
+uuid: 3b5fb87b-85eb-42a2-b448-f5159ff9100f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.meeting
+id: node_type_meeting
+entity_type_id: null
+entity_id: null
+action: page_not_found
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: null

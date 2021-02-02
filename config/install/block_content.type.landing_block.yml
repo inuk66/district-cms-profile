@@ -1,0 +1,10 @@
+uuid: f45d038e-b4a9-40e3-848b-ba383f175c94
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 7VquulGEiW-TqmKT8pRABbhRwNtaZLkN_MBwBbIM_go
+id: landing_block
+label: 'Landing block'
+revision: 0
+description: 'A landing block provides a flexible way of combining multiple components to form a single page.'

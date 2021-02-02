@@ -1,0 +1,259 @@
+uuid: 972f8433-e6f9-42fa-9241-f551b223a451
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.image_entity_browser
+    - field.field.node.business.body
+    - field.field.node.business.field_address
+    - field.field.node.business.field_business_type
+    - field.field.node.business.field_contact
+    - field.field.node.business.field_coordinates
+    - field.field.node.business.field_features
+    - field.field.node.business.field_image
+    - field.field.node.business.field_meta_tags
+    - field.field.node.business.field_phone
+    - field.field.node.business.field_tags
+    - field.field.node.business.field_website
+    - field.field.node.business.field_yoast_seo
+    - node.type.business
+    - workflows.workflow.editorial
+  module:
+    - address
+    - chosen_field
+    - content_moderation
+    - entity_browser
+    - field_group
+    - geofield
+    - link
+    - metatag
+    - paragraphs
+    - path
+    - text
+    - yoast_seo
+third_party_settings:
+  field_group:
+    group_tabs:
+      children:
+        - group_overview
+        - group_seo
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        direction: horizontal
+      label: Tabs
+    group_overview:
+      children:
+        - title
+        - status
+        - field_business_type
+        - body
+        - field_image
+        - field_website
+        - field_phone
+        - field_contact
+        - field_tags
+        - field_coordinates
+        - field_address
+        - field_features
+      parent_name: group_tabs
+      weight: 4
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Overview
+    group_seo:
+      children:
+        - field_yoast_seo
+      parent_name: group_tabs
+      weight: 5
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: SEO
+id: node.business.default
+targetEntityType: node
+bundle: business
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 4
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_address:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_business_type:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: chosen_select
+    region: content
+  field_contact:
+    weight: 8
+    settings:
+      title: Contact
+      title_plural: Contacts
+      edit_mode: open
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: contact
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+  field_coordinates:
+    weight: 10
+    settings:
+      html5_geolocation: false
+    third_party_settings: {  }
+    type: geofield_latlon
+    region: content
+  field_features:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_image:
+    weight: 5
+    settings:
+      entity_browser: image_entity_browser
+      field_widget_display: rendered_entity
+      field_widget_display_settings:
+        view_mode: default
+      field_widget_edit: true
+      field_widget_remove: true
+      open: true
+      selection_mode: selection_append
+      field_widget_replace: false
+    third_party_settings: {  }
+    type: entity_browser_entity_reference
+    region: content
+  field_meta_tags:
+    weight: 26
+    settings:
+      sidebar: true
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
+  field_phone:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tags:
+    weight: 12
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_website:
+    weight: 6
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_yoast_seo:
+    weight: 27
+    settings:
+      body: body
+    third_party_settings: {  }
+    type: yoast_seo_widget
+    region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 8
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 3
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 2
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 5
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+  url_redirects:
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

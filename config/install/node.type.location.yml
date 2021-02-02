@@ -1,0 +1,17 @@
+uuid: bc01894a-5dbf-4b3e-93d6-0d66948dc039
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Location
+type: location
+description: 'Content that relates to a specific geographical location. Use for facilities, parks, business, etc'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

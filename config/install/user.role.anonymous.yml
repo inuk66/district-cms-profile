@@ -1,0 +1,33 @@
+uuid: 17bd4795-8473-4920-a5a0-2150d7a9f320
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
+id: anonymous
+label: 'Anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access content'
+  - 'access sitemap'
+  - 'use search_api_autocomplete for search'
+  - 'use text format restricted_html'
+  - 'view media'
+  - 'view paragraph content accordion'
+  - 'view paragraph content basic_content'
+  - 'view paragraph content card'
+  - 'view paragraph content carousel'
+  - 'view paragraph content contact'
+  - 'view paragraph content downloads'
+  - 'view paragraph content embed'
+  - 'view paragraph content featured_links'
+  - 'view paragraph content flag'
+  - 'view paragraph content link'
+  - 'view paragraph content links'
+  - 'view paragraph content multi_column'
+  - 'view paragraph content steps'
+  - 'view paragraph content text_on_image'
+  - 'view paragraph content title_and_text'
+  - 'view paragraph content webform'
+  - 'view published sitewide alert entities'

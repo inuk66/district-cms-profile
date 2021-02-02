@@ -1,0 +1,14 @@
+uuid: e7cc572d-6f55-433f-b715-94f749b9c3d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.resident
+  module:
+    - user
+id: user_remove_role_action.resident
+label: 'Remove the Resident role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: resident

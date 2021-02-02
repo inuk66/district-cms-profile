@@ -1,0 +1,10 @@
+uuid: fc9c2adc-32d3-4905-abed-fee8272d662d
+langcode: en
+status: true
+dependencies: {  }
+id: layout_multi_column
+label: 'Layout: Multi Column (TO BE DELETED)'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

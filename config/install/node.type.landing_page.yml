@@ -1,0 +1,20 @@
+uuid: e906b400-9a66-4bce-b870-56841b5a931a
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+_core:
+  default_config_hash: c39MrCZ3sHNQijf_WFqK2HNfObNp1TmoiAtGebYuhGk
+name: 'Landing page'
+type: landing_page
+description: 'A landing page provides a flexible way of combining multiple components to form a single page.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

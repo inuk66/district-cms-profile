@@ -1,0 +1,112 @@
+uuid: 0e7c47c6-d882-4763-b912-8ce147fe0bc9
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.menu_link_content.top_level
+    - field.field.menu_link_content.main.field_image
+    - image.style.card
+    - system.menu.main
+  module:
+    - ds
+    - field_group
+    - media
+third_party_settings:
+  field_group:
+    group_info:
+      children:
+        - menu_link_content_title
+        - menu_link_content_description
+        - field_image
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: menu-item__info
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Info
+    group_links:
+      children:
+        - children
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: menu-item__links
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: links
+id: menu_link_content.main.top_level
+targetEntityType: menu_link_content
+bundle: main
+mode: top_level
+content:
+  children:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_image:
+    type: media_thumbnail
+    weight: 3
+    label: hidden
+    settings:
+      image_style: card
+      image_link: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    region: content
+  menu_link_content_description:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  menu_link_content_title:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  search_api_excerpt: true

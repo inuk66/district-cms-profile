@@ -1,0 +1,100 @@
+uuid: 12af95ca-3085-4020-9517-666940b3cd92
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_landing_content
+    - node.type.landing_page
+    - paragraphs.paragraphs_type.accordion
+    - paragraphs.paragraphs_type.basic_content
+    - paragraphs.paragraphs_type.carousel
+    - paragraphs.paragraphs_type.downloads
+    - paragraphs.paragraphs_type.embed
+    - paragraphs.paragraphs_type.featured_links
+    - paragraphs.paragraphs_type.flag
+    - paragraphs.paragraphs_type.multi_column
+    - paragraphs.paragraphs_type.text_on_image
+    - paragraphs.paragraphs_type.links
+    - paragraphs.paragraphs_type.steps
+    - paragraphs.paragraphs_type.webform
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: W0ZxP8FIRRMsJd2rZTM8IDZbxIzdLHZscOpZa7dmJCw
+id: node.landing_page.field_landing_content
+field_name: field_landing_content
+entity_type: node
+bundle: landing_page
+label: 'Landing content'
+description: 'Select the components to display'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      basic_content: basic_content
+      links: links
+      flag: flag
+      multi_column: multi_column
+      text_on_image: text_on_image
+      accordion: accordion
+      downloads: downloads
+      carousel: carousel
+      featured_links: featured_links
+      steps: steps
+      embed: embed
+      webform: webform
+    target_bundles_drag_drop:
+      accordion:
+        enabled: true
+        weight: 11
+      basic_content:
+        enabled: true
+        weight: -15
+      card:
+        weight: -13
+        enabled: false
+      carousel:
+        enabled: true
+        weight: 19
+      contact:
+        weight: 15
+        enabled: false
+      downloads:
+        enabled: true
+        weight: 17
+      embed:
+        enabled: true
+        weight: 23
+      featured_links:
+        enabled: true
+        weight: 19
+      flag:
+        enabled: true
+        weight: -12
+      link:
+        weight: -9
+        enabled: false
+      links:
+        enabled: true
+        weight: -14
+      multi_column:
+        enabled: true
+        weight: -11
+      steps:
+        enabled: true
+        weight: 21
+      text_on_image:
+        enabled: true
+        weight: -10
+      title_and_text:
+        weight: 22
+        enabled: false
+      webform:
+        enabled: true
+        weight: 28
+field_type: entity_reference_revisions

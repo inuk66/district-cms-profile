@@ -1,0 +1,9 @@
+role_to_select:
+  resident: resident
+  administrator: '0'
+  business: '0'
+  content_author: '0'
+  content_approver: '0'
+registration_mode: user
+_core:
+  default_config_hash: o1wWkhSOJotsHFgvzESaUOiTWhLak62cKBDyEtewAIM

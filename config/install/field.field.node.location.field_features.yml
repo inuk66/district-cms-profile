@@ -1,0 +1,19 @@
+uuid: b0bc3c9c-8e99-4f3a-8bb2-75c9ec33aa2d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_features
+    - node.type.location
+id: node.location.field_features
+field_name: field_features
+entity_type: node
+bundle: location
+label: Features
+description: 'Features of this location'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

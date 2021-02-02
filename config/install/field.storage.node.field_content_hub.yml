@@ -1,0 +1,19 @@
+uuid: db00edb4-e91c-4814-868f-3939f2fd68e5
+langcode: en
+status: true
+dependencies:
+  module:
+    - district_push
+    - node
+id: node.field_content_hub
+field_name: field_content_hub
+entity_type: node
+type: district_push_hub
+settings: {  }
+module: district_push
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

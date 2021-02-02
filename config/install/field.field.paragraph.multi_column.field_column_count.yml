@@ -1,0 +1,25 @@
+uuid: b0baa753-9c8d-49db-9517-6a8452a66766
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_column_count
+    - paragraphs.paragraphs_type.multi_column
+  module:
+    - options
+_core:
+  default_config_hash: aLqGiSviVEMfJTaPTcVH12QBLywREJPJmD_d6ViYXvo
+id: paragraph.multi_column.field_column_count
+field_name: field_column_count
+entity_type: paragraph
+bundle: multi_column
+label: 'Column Count'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: 2
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

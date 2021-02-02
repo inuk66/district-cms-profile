@@ -1,0 +1,22 @@
+uuid: eecf89c1-d49c-4278-83ad-f624b745bd86
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - district_base
+_core:
+  default_config_hash: sKQWI2rWuZd6-5XKgOMcf9rLbufWsI5S0BaEFZlbH74
+id: district_base_powered
+theme: district_base
+region: top
+weight: -5
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

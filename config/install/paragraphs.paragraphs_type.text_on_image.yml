@@ -1,0 +1,12 @@
+uuid: 48954d47-3aaa-4274-b9bf-6241c3cb3976
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: lzo-yS0X2EwPW0PCxYmHnLcbL1NTGM1Zj1ujYYAhelE
+id: text_on_image
+label: 'Text on Image'
+icon_uuid: null
+icon_default: null
+description: 'Text overlayed over an image'
+behavior_plugins: {  }

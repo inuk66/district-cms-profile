@@ -1,0 +1,29 @@
+uuid: 8fbb66e1-eadb-41f5-a054-631785c3db56
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tags
+    - node.type.event
+    - taxonomy.vocabulary.tags
+id: node.event.field_tags
+field_name: field_tags
+entity_type: node
+bundle: event
+label: Tags
+description: 'Assign a site wide tag or keyword to this content'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tags: tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

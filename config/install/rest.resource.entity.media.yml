@@ -1,0 +1,21 @@
+uuid: 9e4ae138-8700-4af4-9001-dfd099d154bc
+langcode: en
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - hal
+    - media
+id: entity.media
+plugin_id: 'entity:media'
+granularity: resource
+configuration:
+  methods:
+    - GET
+    - POST
+    - DELETE
+    - PATCH
+  formats:
+    - hal_json
+  authentication:
+    - basic_auth

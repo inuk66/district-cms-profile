@@ -1,0 +1,21 @@
+uuid: 93bede44-b914-40cf-8e50-8be08310e1eb
+langcode: en
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - hal
+    - paragraphs
+id: entity.paragraph
+plugin_id: 'entity:paragraph'
+granularity: resource
+configuration:
+  methods:
+    - GET
+    - POST
+    - DELETE
+    - PATCH
+  formats:
+    - hal_json
+  authentication:
+    - basic_auth

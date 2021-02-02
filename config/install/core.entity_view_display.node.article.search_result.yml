@@ -1,0 +1,153 @@
+uuid: 5e3df3c3-fca7-49dd-9680-cf818bbce709
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_result
+    - field.field.node.article.body
+    - field.field.node.article.field_image
+    - field.field.node.article.field_meta_tags
+    - field.field.node.article.field_tags
+    - field.field.node.article.field_yoast_seo
+    - node.type.article
+  module:
+    - ds
+    - field_formatter_range
+    - panelizer
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: district_search_result
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        wrappers:
+          title: div
+          description: div
+          meta: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      title:
+        - node_title
+      description:
+        - search_api_excerpt
+      meta:
+        - 'bundle_field:node'
+        - field_tags
+    fields:
+      'bundle_field:node':
+        plugin_id: 'bundle_field:node'
+        weight: 2
+        label: hidden
+        formatter: default
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: ''
+          class: ''
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+_core:
+  default_config_hash: jpHK2GJOG1smncyP_ckyAFdNGkH2diSO-BFPrgXr64I
+id: node.article.search_result
+targetEntityType: node
+bundle: article
+mode: search_result
+content:
+  field_tags:
+    type: entity_reference_label
+    weight: 3
+    region: meta
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      field_formatter_range:
+        limit: 0
+        offset: 0
+        reverse: false
+      ds:
+        ds_limit: ''
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: ''
+            fi-cl: search-result-capsule
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+  search_api_excerpt:
+    weight: 1
+    region: description
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  anonymous_comments_login_link: true
+  articles_related_eva: true
+  body: true
+  content_moderation_control: true
+  field_image: true
+  field_meta_tags: true
+  field_yoast_seo: true
+  links: true

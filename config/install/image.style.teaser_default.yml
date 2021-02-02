@@ -1,0 +1,15 @@
+uuid: 823976f0-2d8f-4322-b360-f9234291e6b1
+langcode: en
+status: true
+dependencies: {  }
+name: teaser_default
+label: 'Teaser Default (400 x 300)'
+effects:
+  92b88678-4683-4a51-a061-6294a63dc003:
+    uuid: 92b88678-4683-4a51-a061-6294a63dc003
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 400
+      height: 300
+      anchor: center-center

@@ -1,0 +1,10 @@
+uuid: 7a399047-166d-4018-b100-53daa6916b56
+langcode: en
+status: true
+dependencies: {  }
+id: webform
+label: Webform
+icon_uuid: null
+icon_default: null
+description: 'Embed an existing webform'
+behavior_plugins: {  }

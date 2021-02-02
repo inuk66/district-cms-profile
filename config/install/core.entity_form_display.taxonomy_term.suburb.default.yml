@@ -1,0 +1,68 @@
+uuid: d35601a0-0408-4bb4-a23e-2b2b87c084b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.suburb.field_bin_day
+    - field.field.taxonomy_term.suburb.field_coordinates
+    - field.field.taxonomy_term.suburb.field_postcode
+    - taxonomy.vocabulary.suburb
+  module:
+    - geofield
+    - path
+    - text
+id: taxonomy_term.suburb.default
+targetEntityType: taxonomy_term
+bundle: suburb
+mode: default
+content:
+  description:
+    type: text_textarea
+    weight: -9
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_bin_day:
+    weight: -5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_coordinates:
+    weight: -6
+    settings:
+      html5_geolocation: false
+    third_party_settings: {  }
+    type: geofield_latlon
+    region: content
+  field_postcode:
+    weight: -8
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  name:
+    type: string_textfield
+    weight: -10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: -3
+    region: content
+    third_party_settings: {  }
+hidden: {  }

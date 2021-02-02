@@ -1,0 +1,103 @@
+uuid: 1df8b901-8334-406d-ba75-4b32dd99111f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.landing_page.body
+    - field.field.node.landing_page.field_image
+    - field.field.node.landing_page.field_landing_content
+    - field.field.node.landing_page.field_meta_tags
+    - field.field.node.landing_page.field_tags
+    - field.field.node.landing_page.field_yoast_seo
+    - node.type.landing_page
+  module:
+    - ds
+    - entity_reference_revisions
+    - metatag
+    - panelizer
+    - text
+    - user
+    - yoast_seo
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - body
+        - field_landing_content
+        - links
+        - field_tags
+        - field_meta_tags
+        - field_yoast_seo
+_core:
+  default_config_hash: svwlj7oPInED5T3Tau1maronHRRAfq617RXDi2uxOUk
+id: node.landing_page.default
+targetEntityType: node
+bundle: landing_page
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: ds_content
+  field_landing_content:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: ds_content
+  field_meta_tags:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: ds_content
+  field_tags:
+    weight: 3
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: ds_content
+  field_yoast_seo:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: yoastseo_formatter
+    region: ds_content
+  links:
+    weight: 2
+    region: ds_content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_image: true
+  search_api_excerpt: true

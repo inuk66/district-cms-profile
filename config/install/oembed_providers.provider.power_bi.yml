@@ -1,0 +1,16 @@
+uuid: 6444e4c5-b561-47af-96a4-c249e4ce2b66
+langcode: en
+status: true
+dependencies: {  }
+id: power_bi
+label: 'Power BI'
+provider_url: 'https://app.powerbi.com'
+endpoints:
+  -
+    schemes:
+      - 'https://app.powerbi.com/view*'
+    url: 'http://oembed.doghouse.agency'
+    discovery: false
+    formats:
+      json: true
+      xml: false

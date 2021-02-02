@@ -1,0 +1,282 @@
+uuid: 9a5dd9cc-bf1c-4487-9512-d625a9bf3e57
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser_horizontal
+    - field.field.node.location.body
+    - field.field.node.location.field_address
+    - field.field.node.location.field_contact
+    - field.field.node.location.field_coordinates
+    - field.field.node.location.field_features
+    - field.field.node.location.field_image
+    - field.field.node.location.field_meta_tags
+    - field.field.node.location.field_tags
+    - field.field.node.location.field_type
+    - field.field.node.location.field_website
+    - field.field.node.location.field_yoast_seo
+    - image.style.teaser_default
+    - node.type.location
+  module:
+    - district_locations
+    - ds
+    - field_formatter_range
+    - media
+    - panelizer
+    - smart_trim
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: district_teaser_horizontal
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        wrappers:
+          image: div
+          title: div
+          main: div
+          tag: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      image:
+        - content_moderation_control
+        - field_image
+      title:
+        - node_title
+      main:
+        - body
+        - field_address
+      tag:
+        - field_type
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 2
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: ''
+          class: ''
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.location.teaser_horizontal
+targetEntityType: node
+bundle: location
+mode: teaser_horizontal
+content:
+  body:
+    label: hidden
+    type: smart_trim
+    weight: 3
+    settings:
+      trim_length: 200
+      trim_type: chars
+      trim_suffix: ...
+      wrap_class: trimmed
+      more_text: More
+      more_class: more-link
+      summary_handler: full
+      trim_options:
+        text: true
+        trim_zero: false
+      wrap_output: false
+      more_link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: p
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+    region: main
+  content_moderation_control:
+    weight: 0
+    region: image
+    settings: {  }
+    third_party_settings: {  }
+  field_address:
+    type: inline_address_formatter
+    weight: 4
+    region: main
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: p
+            fi-cl: description
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+  field_image:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: teaser_default
+      image_link: content
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: div
+            ow-cl: duk-mb--2
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    type: media_thumbnail
+    region: image
+  field_type:
+    weight: 5
+    label: hidden
+    settings:
+      link: true
+    third_party_settings:
+      field_formatter_range:
+        limit: 3
+        offset: 0
+        reverse: false
+      ds:
+        ds_limit: ''
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow: true
+            ow-el: div
+            ow-cl: duk-mb--2
+            ow-at: ''
+            fis: true
+            fis-el: ul
+            fis-cl: tags
+            fis-at: ''
+            fi: true
+            fi-el: li
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis-def-at: false
+            fi-def-at: false
+    type: entity_reference_label
+    region: tag
+hidden:
+  anonymous_comments_login_link: true
+  events_entity_view_1: true
+  field_contact: true
+  field_coordinates: true
+  field_features: true
+  field_meta_tags: true
+  field_tags: true
+  field_website: true
+  field_yoast_seo: true
+  links: true
+  search_api_excerpt: true

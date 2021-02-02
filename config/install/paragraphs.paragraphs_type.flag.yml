@@ -1,0 +1,12 @@
+uuid: 398a7fc0-8cf0-467c-a335-1ce934828d4a
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: q3SsxAhT3x8pIdD4dVHs3DcVvIZUC7pGbe0rxA6tH1M
+id: flag
+label: Flag
+icon_uuid: null
+icon_default: null
+description: 'A flag places the image to the left or right of the content.'
+behavior_plugins: {  }

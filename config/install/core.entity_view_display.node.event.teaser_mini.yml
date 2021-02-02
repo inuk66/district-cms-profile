@@ -1,0 +1,207 @@
+uuid: 991a3b93-638a-4c0d-9d51-e2556e80ce0d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser_mini
+    - field.field.node.event.body
+    - field.field.node.event.field_address
+    - field.field.node.event.field_content_hub
+    - field.field.node.event.field_coordinates
+    - field.field.node.event.field_dates
+    - field.field.node.event.field_image
+    - field.field.node.event.field_location
+    - field.field.node.event.field_meta_tags
+    - field.field.node.event.field_overridden
+    - field.field.node.event.field_phone
+    - field.field.node.event.field_sync
+    - field.field.node.event.field_tags
+    - field.field.node.event.field_website
+    - field.field.node.event.field_yoast_seo
+    - image.style.thumbnail
+    - node.type.event
+  module:
+    - ds
+    - field_group
+    - media
+    - panelizer
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: district_teaser_map_popup
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        wrappers:
+          image: div
+          main: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      image:
+        - field_image
+      main:
+        - node_title
+        - field_tags
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: h4
+          class: ''
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+  field_group:
+    group_address:
+      children: {  }
+      parent_name: ''
+      weight: 3
+      format_type: html_element
+      region: hidden
+      format_settings:
+        id: ''
+        classes: 'address-map duk-mb--2'
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Address
+id: node.event.teaser_mini
+targetEntityType: node
+bundle: event
+mode: teaser_mini
+content:
+  field_image:
+    type: media_thumbnail
+    weight: 0
+    region: image
+    label: hidden
+    settings:
+      image_style: thumbnail
+      image_link: content
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+  field_tags:
+    type: entity_reference_label
+    weight: 2
+    region: main
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: '1'
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: h4
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ul
+            fis-cl: tags
+            fis-at: ''
+            fi-el: li
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+hidden:
+  body: true
+  content_moderation_control: true
+  field_address: true
+  field_content_hub: true
+  field_coordinates: true
+  field_dates: true
+  field_location: true
+  field_meta_tags: true
+  field_overridden: true
+  field_phone: true
+  field_sync: true
+  field_website: true
+  field_yoast_seo: true
+  links: true
+  search_api_excerpt: true

@@ -1,0 +1,10 @@
+uuid: 7b28b728-38d5-4e31-a468-027e47fb732a
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: ZqKmocKUMM-F1z7Z79mAkTR-7Q5jKztscVsjk_cCaUs
+name: Raw
+format: raw
+weight: 10
+filters: {  }

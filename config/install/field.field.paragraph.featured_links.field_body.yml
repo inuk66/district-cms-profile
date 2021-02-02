@@ -1,0 +1,21 @@
+uuid: f7d15700-47f6-44ed-b9b1-a1ff2ce6cc9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body
+    - paragraphs.paragraphs_type.featured_links
+  module:
+    - text
+id: paragraph.featured_links.field_body
+field_name: field_body
+entity_type: paragraph
+bundle: featured_links
+label: Body
+description: 'The text that displays above the links'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

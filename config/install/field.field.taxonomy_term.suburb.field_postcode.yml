@@ -1,0 +1,23 @@
+uuid: 6378587b-cff5-49a4-bd1c-f53206627c27
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_postcode
+    - taxonomy.vocabulary.suburb
+id: taxonomy_term.suburb.field_postcode
+field_name: field_postcode
+entity_type: taxonomy_term
+bundle: suburb
+label: Postcode
+description: 'The numerical postcode of this suburb.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: 999999
+  prefix: ''
+  suffix: ''
+field_type: integer

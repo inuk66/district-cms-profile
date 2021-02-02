@@ -1,0 +1,29 @@
+uuid: f6492eb5-eb61-4342-94d3-4b074fdd43a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.generic_oembed.field_media_oembed_generic
+    - media.type.generic_oembed
+  module:
+    - media
+id: media.generic_oembed.default
+targetEntityType: media
+bundle: generic_oembed
+mode: default
+content:
+  field_media_oembed_generic:
+    type: oembed
+    label: visually_hidden
+    weight: 0
+    settings:
+      max_width: 0
+      max_height: 0
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

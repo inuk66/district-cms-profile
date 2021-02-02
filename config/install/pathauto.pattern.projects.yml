@@ -1,0 +1,22 @@
+uuid: 143dabc4-8514-442b-8d49-814802112be9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: projects
+label: Projects
+type: 'canonical_entities:node'
+pattern: '/building-planing/projects/[node:field_type:0:entity]/[node:title]'
+selection_criteria:
+  add87476-597b-4c98-a179-f1e5499f2765:
+    id: node_type
+    bundles:
+      project: project
+    negate: false
+    context_mapping:
+      node: node
+    uuid: add87476-597b-4c98-a179-f1e5499f2765
+selection_logic: and
+weight: -6
+relationships: {  }

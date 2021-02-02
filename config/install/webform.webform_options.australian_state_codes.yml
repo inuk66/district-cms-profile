@@ -1,0 +1,9 @@
+uuid: 0a37137e-b475-4708-8a77-da170c50569f
+langcode: en
+status: true
+dependencies: {  }
+id: australian_state_codes
+label: 'Australian State Codes'
+category: Geographic
+likert: false
+options: "ACT: ACT\nNSW: NSW\nNT: NT\nQLD: QLD\nTAS: TAS\nVIC: VIC\nWA: WA"

@@ -1,0 +1,10 @@
+uuid: d09790dc-4cb3-4e95-aa16-db20ca5a2045
+langcode: en
+status: true
+dependencies: {  }
+id: downloads
+label: Downloads
+icon_uuid: null
+icon_default: null
+description: 'Downloads are presented as a list of files that can be downloaded'
+behavior_plugins: {  }

@@ -1,0 +1,73 @@
+uuid: 74540165-6637-4284-8033-996592f67e7b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cards
+    - paragraphs.paragraphs_type.card
+    - paragraphs.paragraphs_type.carousel
+  module:
+    - entity_reference_revisions
+id: paragraph.carousel.field_cards
+field_name: field_cards
+entity_type: paragraph
+bundle: carousel
+label: Cards
+description: 'The cards to display in the carousel'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      card: card
+    target_bundles_drag_drop:
+      accordion:
+        weight: 16
+        enabled: false
+      basic_content:
+        weight: 17
+        enabled: false
+      card:
+        enabled: true
+        weight: 18
+      carousel:
+        weight: 19
+        enabled: false
+      contact:
+        weight: 20
+        enabled: false
+      downloads:
+        weight: 21
+        enabled: false
+      featured_links:
+        weight: 22
+        enabled: false
+      flag:
+        weight: 23
+        enabled: false
+      link:
+        weight: 26
+        enabled: false
+      links:
+        weight: 27
+        enabled: false
+      multi_column:
+        weight: 24
+        enabled: false
+      steps:
+        weight: 28
+        enabled: false
+      text_on_image:
+        weight: 25
+        enabled: false
+      title_and_text:
+        weight: 29
+        enabled: false
+      webform:
+        weight: 30
+        enabled: false
+field_type: entity_reference_revisions

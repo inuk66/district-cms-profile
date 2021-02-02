@@ -1,0 +1,15 @@
+uuid: 2fc4830c-5cd6-4098-b6e1-45cfb53d4d4d
+langcode: en
+status: true
+dependencies: {  }
+name: hero_banner
+label: 'Hero Banner (1200 x 500)'
+effects:
+  016d50d3-2f5f-45e9-bd47-5f169ff5c915:
+    uuid: 016d50d3-2f5f-45e9-bd47-5f169ff5c915
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1200
+      height: 500
+      anchor: center-center

@@ -1,0 +1,27 @@
+uuid: 04a90e38-6d2a-4dfc-8bcd-76ddfde4fa90
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_palette
+field_name: field_palette
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: palette__bg--primary
+      label: Primary
+    -
+      value: palette__bg--secondary
+      label: Secondary
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

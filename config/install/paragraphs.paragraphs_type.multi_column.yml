@@ -1,0 +1,12 @@
+uuid: 45c43523-2037-4be1-b54b-c4f03d34d8ba
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: S7g57CsOI5MUGn-Jadv4Y0ezpO7WevHCOKlVuNecsc8
+id: multi_column
+label: 'Multi Column'
+icon_uuid: null
+icon_default: null
+description: 'A Multi column layout of cards.'
+behavior_plugins: {  }

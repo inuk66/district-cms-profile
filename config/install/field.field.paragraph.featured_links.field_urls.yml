@@ -1,0 +1,23 @@
+uuid: c77c690a-0dcc-4975-b599-053d207a9420
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_urls
+    - paragraphs.paragraphs_type.featured_links
+  module:
+    - link
+id: paragraph.featured_links.field_urls
+field_name: field_urls
+entity_type: paragraph
+bundle: featured_links
+label: Links
+description: 'One or more links to internal or external content'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

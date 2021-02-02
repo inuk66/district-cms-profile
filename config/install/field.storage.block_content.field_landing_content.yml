@@ -1,0 +1,23 @@
+uuid: 273b308a-2e52-4a72-84ad-5f681db0fc45
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - entity_reference_revisions
+    - paragraphs
+_core:
+  default_config_hash: ZwhGFP300l1G0k1Jbj3YRQ8FqRR9OugGSKBAKmoeqek
+id: block_content.field_landing_content
+field_name: field_landing_content
+entity_type: block_content
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

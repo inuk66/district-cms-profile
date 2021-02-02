@@ -1,0 +1,22 @@
+uuid: 2ec1b35e-5af7-46e4-9c65-312ffc36fe68
+langcode: en
+status: true
+dependencies:
+  theme:
+    - district_base
+_core:
+  default_config_hash: rb13MGeTOzZECXGMiSlYqEXM-NClbGD4SiGDtn3Iaes
+id: district_base_local_tasks
+theme: district_base
+region: content
+weight: -40
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

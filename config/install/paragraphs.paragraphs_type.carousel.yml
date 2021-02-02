@@ -1,0 +1,10 @@
+uuid: 94de0b73-7bcd-44d8-b052-b1d9dae46587
+langcode: en
+status: true
+dependencies: {  }
+id: carousel
+label: Carousel
+icon_uuid: null
+icon_default: null
+description: 'Display multiple cards in a carousel format'
+behavior_plugins: {  }

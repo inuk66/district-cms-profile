@@ -1,0 +1,22 @@
+uuid: 0a8e27b8-3af9-4398-89c6-98682583d064
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - district_base
+_core:
+  default_config_hash: Ogq_7jkb1PEGeFruNF0qVB7oV7VUOySgW1PZ35e2I1g
+id: district_base_content
+theme: district_base
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

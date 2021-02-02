@@ -1,0 +1,42 @@
+uuid: a00efeec-87e3-413e-bf03-47e85d4078a0
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - taxonomy
+id: taxonomy_term.field_bin_day
+field_name: field_bin_day
+entity_type: taxonomy_term
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: monday
+      label: Monday
+    -
+      value: tuesday
+      label: Tuesday
+    -
+      value: wednesday
+      label: Wednesday
+    -
+      value: thursday
+      label: Thursday
+    -
+      value: friday
+      label: Friday
+    -
+      value: saturday
+      label: Saturday
+    -
+      value: sunday
+      label: Sunday
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

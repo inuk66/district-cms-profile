@@ -1,0 +1,21 @@
+uuid: fd927408-0689-4ac2-9d7c-893a8f3aadf2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body
+    - paragraphs.paragraphs_type.downloads
+  module:
+    - text
+id: paragraph.downloads.field_body
+field_name: field_body
+entity_type: paragraph
+bundle: downloads
+label: Prefix
+description: 'The prefix displays above the list of downloads'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,36 @@
+uuid: 1e52b1b2-9460-4b9a-a3e9-83fc6455d5a1
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access content'
+  - 'access sitemap'
+  - 'edit own comments'
+  - 'opt-in or out of google analytics tracking'
+  - 'post comments'
+  - 'use search_api_autocomplete for search'
+  - 'use text format basic_html'
+  - 'view media'
+  - 'view paragraph content accordion'
+  - 'view paragraph content basic_content'
+  - 'view paragraph content card'
+  - 'view paragraph content carousel'
+  - 'view paragraph content contact'
+  - 'view paragraph content downloads'
+  - 'view paragraph content embed'
+  - 'view paragraph content featured_links'
+  - 'view paragraph content flag'
+  - 'view paragraph content link'
+  - 'view paragraph content links'
+  - 'view paragraph content multi_column'
+  - 'view paragraph content steps'
+  - 'view paragraph content text_on_image'
+  - 'view paragraph content title_and_text'
+  - 'view paragraph content webform'
+  - 'view published sitewide alert entities'

@@ -1,0 +1,83 @@
+uuid: b0461172-dd6a-4b56-b37a-ad3236218d3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+  module:
+    - ckeditor
+_core:
+  default_config_hash: xv1OfdMnZWCJPWj6baHrTUf1gt44UHku3uDpo1TPaUg
+format: full_html
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Formatting
+          items:
+            - Bold
+            - Italic
+            - Strike
+            - Superscript
+            - Subscript
+            - '-'
+            - RemoveFormat
+        -
+          name: Linking
+          items:
+            - DrupalLink
+            - DrupalUnlink
+        -
+          name: Lists
+          items:
+            - BulletedList
+            - NumberedList
+        -
+          name: Media
+          items:
+            - Blockquote
+            - DrupalImage
+            - Table
+            - HorizontalRule
+        -
+          name: 'Block Formatting'
+          items:
+            - Format
+            - Styles
+        -
+          name: Tools
+          items:
+            - PasteText
+            - ShowBlocks
+            - Source
+        -
+          name: Accessibility
+          items:
+            - A11ychecker
+  plugins:
+    stylescombo:
+      styles: "a.button.button--primary|Button Primary\r\na.button.button--secondary|Button Secondary\r\np.lead|Lead Text\r\n"
+    drupallink:
+      linkit_enabled: false
+      linkit_profile: ''
+    language:
+      language_list: un
+    tokenbrowser:
+      token_types: {  }
+    video_embed:
+      defaults:
+        children:
+          autoplay: true
+          responsive: true
+          width: '854'
+          height: '480'
+image_upload:
+  status: true
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: 1000
+    height: 1000

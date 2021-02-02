@@ -1,0 +1,15 @@
+uuid: c5807b76-9ce6-463c-b032-1bad42ac1bda
+langcode: en
+status: true
+dependencies: {  }
+id: generic_oembed
+label: 'Generic Oembed'
+description: 'Add generic remote oembed media.'
+source: 'oembed:generic'
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  thumbnails_directory: 'public://oembed_thumbnails'
+  providers: {  }
+  source_field: field_media_oembed_generic
+field_map: {  }

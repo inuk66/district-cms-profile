@@ -1,0 +1,61 @@
+uuid: 2a59e70c-cd2b-4d9a-af29-47ba812de6df
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_items
+    - paragraphs.paragraphs_type.steps
+    - paragraphs.paragraphs_type.title_and_text
+  module:
+    - entity_reference_revisions
+id: paragraph.steps.field_items
+field_name: field_items
+entity_type: paragraph
+bundle: steps
+label: Items
+description: 'The steps to display to the user'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      title_and_text: title_and_text
+    target_bundles_drag_drop:
+      accordion:
+        weight: 12
+        enabled: false
+      basic_content:
+        weight: 13
+        enabled: false
+      card:
+        weight: 14
+        enabled: false
+      contact:
+        weight: 15
+        enabled: false
+      flag:
+        weight: 16
+        enabled: false
+      link:
+        weight: 19
+        enabled: false
+      links:
+        weight: 20
+        enabled: false
+      multi_column:
+        weight: 17
+        enabled: false
+      steps:
+        weight: 21
+        enabled: false
+      text_on_image:
+        weight: 18
+        enabled: false
+      title_and_text:
+        enabled: true
+        weight: 22
+field_type: entity_reference_revisions

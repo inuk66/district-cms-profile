@@ -1,0 +1,23 @@
+uuid: 2389c9b4-61b2-484f-bd43-e58373c33d84
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sync
+    - node.type.event
+  module:
+    - district_push
+id: node.event.field_sync
+field_name: field_sync
+entity_type: node
+bundle: event
+label: 'Content Share'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    satellites: null
+default_value_callback: ''
+settings: {  }
+field_type: district_push_syncstate

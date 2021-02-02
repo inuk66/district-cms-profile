@@ -1,0 +1,25 @@
+uuid: dfc697dc-fdef-448a-8c47-b508a3f0afc3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_content_position
+    - paragraphs.paragraphs_type.text_on_image
+  module:
+    - options
+_core:
+  default_config_hash: WfRomhCgh7o8lvxt6Hh96ml77YIjetT7juDyl-C4Ys0
+id: paragraph.text_on_image.field_content_position
+field_name: field_content_position
+entity_type: paragraph
+bundle: text_on_image
+label: 'Content Position'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: middle
+default_value_callback: ''
+settings: {  }
+field_type: list_string

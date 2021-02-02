@@ -1,0 +1,10 @@
+uuid: 57c28422-9c6c-4edb-83cd-57ac303c2409
+langcode: en
+status: true
+dependencies: {  }
+id: title_and_text
+label: 'Title and Text'
+icon_uuid: null
+icon_default: null
+description: 'Used to construct lists of title + text. Commonly used by things such as accordions and numbered lists'
+behavior_plugins: {  }

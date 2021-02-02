@@ -1,0 +1,10 @@
+uuid: 9d753437-8590-4a0c-8097-f1ddbdce2c6c
+langcode: en
+status: true
+dependencies: {  }
+id: layout_flag
+label: 'Layout: Flag (TO BE DELETED)'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

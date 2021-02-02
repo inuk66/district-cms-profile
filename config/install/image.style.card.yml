@@ -1,0 +1,15 @@
+uuid: fbcb95be-5030-4945-8dd8-b9a29b4f7140
+langcode: en
+status: true
+dependencies: {  }
+name: card
+label: 'Card (600 x 400)'
+effects:
+  d62cff30-e3f0-4601-be27-e8cc7f4c33ca:
+    uuid: d62cff30-e3f0-4601-be27-e8cc7f4c33ca
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 600
+      height: 400
+      anchor: center-center

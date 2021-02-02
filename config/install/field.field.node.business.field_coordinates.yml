@@ -1,0 +1,22 @@
+uuid: 18d65cf2-4265-4870-9e33-2f824c4cb78c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_coordinates
+    - node.type.business
+  module:
+    - geofield
+id: node.business.field_coordinates
+field_name: field_coordinates
+entity_type: node
+bundle: business
+label: Coordinates
+description: 'The latitude and longitude to display this business on a map'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  backend: geofield_backend_default
+field_type: geofield

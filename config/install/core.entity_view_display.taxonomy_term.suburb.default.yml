@@ -1,0 +1,52 @@
+uuid: d600a590-7497-4a96-981c-d2d0643d8162
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.suburb.field_bin_day
+    - field.field.taxonomy_term.suburb.field_coordinates
+    - field.field.taxonomy_term.suburb.field_postcode
+    - taxonomy.vocabulary.suburb
+  module:
+    - geofield
+    - options
+    - text
+id: taxonomy_term.suburb.default
+targetEntityType: taxonomy_term
+bundle: suburb
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_bin_day:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_coordinates:
+    weight: 2
+    label: above
+    settings:
+      output_format: wkt
+      output_escape: true
+    third_party_settings: {  }
+    type: geofield_default
+    region: content
+  field_postcode:
+    weight: 1
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+hidden:
+  search_api_excerpt: true

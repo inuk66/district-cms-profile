@@ -1,0 +1,9 @@
+uuid: 2db0c53f-b41c-47a1-bda9-b0668497f291
+langcode: en
+status: true
+dependencies: {  }
+id: visa_type
+label: 'Visa Type'
+category: ''
+likert: false
+options: "australian_temporary_resident: 'Australian Permanent Resident Visa'\nnew_zealand_citizen: 'New Zealand Citizen'\nbridging: 'Bridging Visa'\nstudent: 'Student Visa'\nworking_holiday: 'Working Holiday Visa'\ntemporary_shortage_skills: 'Temporary shortage skills visa'\nrefugee-humanitarian: Refugee/humanitarian\nno_australian_working_rights: 'No Australian working rights'"

@@ -1,0 +1,23 @@
+uuid: b007f78c-01e9-477d-ac4d-3e35e354de15
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_urls
+    - paragraphs.paragraphs_type.contact
+  module:
+    - link
+id: paragraph.contact.field_urls
+field_name: field_urls
+entity_type: paragraph
+bundle: contact
+label: 'Social Media'
+description: 'The contact social media URLs'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 2
+field_type: link

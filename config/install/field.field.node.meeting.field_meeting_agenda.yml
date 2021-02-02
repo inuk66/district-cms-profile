@@ -1,0 +1,28 @@
+uuid: fad865aa-bf9f-47e2-b4ec-68a1ffd03e55
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meeting_agenda
+    - media.type.file
+    - node.type.meeting
+id: node.meeting.field_meeting_agenda
+field_name: field_meeting_agenda
+entity_type: node
+bundle: meeting
+label: 'Meeting Agenda'
+description: 'The full meeting agenda'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      file: file
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,87 @@
+uuid: 55a666b5-18c2-4078-9e89-8ac8fc8de969
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.meeting.body
+    - field.field.node.meeting.field_date
+    - field.field.node.meeting.field_meeting_agenda
+    - field.field.node.meeting.field_meeting_minutes
+    - node.type.meeting
+  module:
+    - datetime
+    - ds
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - field_date
+        - body
+        - field_meeting_agenda
+        - field_meeting_minutes
+id: node.meeting.default
+targetEntityType: node
+bundle: meeting
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: ds_content
+  field_date:
+    weight: 0
+    label: inline
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: ds_content
+  field_meeting_agenda:
+    type: entity_reference_entity_view
+    weight: 2
+    label: inline
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: ds_content
+  field_meeting_minutes:
+    type: entity_reference_entity_view
+    weight: 3
+    label: inline
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: ds_content
+hidden:
+  anonymous_comments_login_link: true
+  links: true
+  search_api_excerpt: true

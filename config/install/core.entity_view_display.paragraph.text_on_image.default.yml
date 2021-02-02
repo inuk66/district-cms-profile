@@ -1,0 +1,135 @@
+uuid: 01671998-4824-4199-9b43-28d325c4da0d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.text_on_image.field_body
+    - field.field.paragraph.text_on_image.field_content_position
+    - field.field.paragraph.text_on_image.field_link
+    - field.field.paragraph.text_on_image.field_media
+    - image.style.max_1300x1300
+    - paragraphs.paragraphs_type.text_on_image
+  module:
+    - ds
+    - element_class_formatter
+    - media
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: district_text_on_image
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        wrappers:
+          main: div
+          image: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      main:
+        - field_body
+        - field_link
+      image:
+        - field_media
+_core:
+  default_config_hash: 3EA6q_MTQxtZvudyg74_SDxc6AJzqhblpvO3MqvQo3o
+id: paragraph.text_on_image.default
+targetEntityType: paragraph
+bundle: text_on_image
+mode: default
+content:
+  field_body:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: main
+  field_link:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 80
+      class: 'button button--secondary'
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    type: link_class
+    region: main
+  field_media:
+    weight: 2
+    label: hidden
+    settings:
+      image_style: max_1300x1300
+      image_link: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    type: media_thumbnail
+    region: image
+hidden:
+  field_content_position: true
+  search_api_excerpt: true

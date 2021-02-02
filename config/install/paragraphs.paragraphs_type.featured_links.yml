@@ -1,0 +1,10 @@
+uuid: 300f3b67-eb61-409b-928b-e41ad44d1d45
+langcode: en
+status: true
+dependencies: {  }
+id: featured_links
+label: 'Featured Links'
+icon_uuid: null
+icon_default: null
+description: 'Displays with a large image on the side, content followed by a list of links. Can be used as a hero or placed within a landing page'
+behavior_plugins: {  }

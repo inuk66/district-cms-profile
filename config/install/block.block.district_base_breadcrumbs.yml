@@ -1,0 +1,22 @@
+uuid: 5f27216a-57ff-41aa-b2a8-37943eb10835
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - district_base
+_core:
+  default_config_hash: uCj6L0DRKELhTU0orVHSMQI1wD_S4OKZcbkEQDBQlYw
+id: district_base_breadcrumbs
+theme: district_base
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,28 @@
+uuid: b63a5c08-ddbd-4764-908c-679d82c27289
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.menu_link_content.field_image
+    - media.type.image
+    - system.menu.main
+id: menu_link_content.main.field_image
+field_name: field_image
+entity_type: menu_link_content
+bundle: main
+label: Image
+description: 'This image will be displayed on the main navigation dropdown when used on top level menu links'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

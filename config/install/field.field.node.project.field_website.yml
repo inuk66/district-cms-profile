@@ -1,0 +1,23 @@
+uuid: 6cfd5e18-95f6-4485-86ee-63c9172a0bda
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_website
+    - node.type.project
+  module:
+    - link
+id: node.project.field_website
+field_name: field_website
+entity_type: node
+bundle: project
+label: Website
+description: 'The full url to the website for this location.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

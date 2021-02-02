@@ -1,0 +1,73 @@
+uuid: 92cff3a4-6b1c-4baf-8bdd-03a880d837a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact
+    - node.type.project
+    - paragraphs.paragraphs_type.contact
+  module:
+    - entity_reference_revisions
+id: node.project.field_contact
+field_name: field_contact
+entity_type: node
+bundle: project
+label: 'Who is listening'
+description: 'Add one or more contacts for this location'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      contact: contact
+    target_bundles_drag_drop:
+      accordion:
+        weight: 16
+        enabled: false
+      basic_content:
+        weight: 9
+        enabled: false
+      card:
+        weight: 10
+        enabled: false
+      carousel:
+        weight: 19
+        enabled: false
+      contact:
+        enabled: true
+        weight: 11
+      downloads:
+        weight: 21
+        enabled: false
+      featured_links:
+        weight: 22
+        enabled: false
+      flag:
+        weight: 12
+        enabled: false
+      link:
+        weight: 15
+        enabled: false
+      links:
+        weight: 16
+        enabled: false
+      multi_column:
+        weight: 13
+        enabled: false
+      steps:
+        weight: 28
+        enabled: false
+      text_on_image:
+        weight: 14
+        enabled: false
+      title_and_text:
+        weight: 29
+        enabled: false
+      webform:
+        weight: 30
+        enabled: false
+field_type: entity_reference_revisions

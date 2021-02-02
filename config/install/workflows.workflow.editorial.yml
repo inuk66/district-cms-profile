@@ -1,0 +1,110 @@
+uuid: ee09a501-d7cc-4379-bb89-c044cc70e6ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.article
+    - node.type.business
+    - node.type.event
+    - node.type.landing_page
+    - node.type.location
+    - node.type.page
+    - node.type.project
+  module:
+    - content_moderation
+_core:
+  default_config_hash: T_JxNjYlfoRBi7Bj1zs5Xv9xv1btuBkKp5C1tNrjMhI
+id: editorial
+label: Editorial
+type: content_moderation
+type_settings:
+  states:
+    approved:
+      published: false
+      default_revision: false
+      label: Approved
+      weight: -1
+    archived:
+      label: Archived
+      weight: 1
+      published: false
+      default_revision: true
+    draft:
+      label: Draft
+      published: false
+      default_revision: false
+      weight: -3
+    needs_review:
+      published: false
+      default_revision: false
+      label: 'Needs Review'
+      weight: -2
+    published:
+      label: Published
+      published: true
+      default_revision: true
+      weight: 0
+  transitions:
+    approved_for_publishing:
+      label: 'Approved for Publishing'
+      from:
+        - approved
+        - needs_review
+      to: approved
+      weight: -1
+    archive:
+      label: Archive
+      from:
+        - published
+      to: archived
+      weight: 1
+    archived_draft:
+      label: 'Restore to Draft'
+      from:
+        - archived
+      to: draft
+      weight: 2
+    archived_published:
+      label: Restore
+      from:
+        - archived
+      to: published
+      weight: 3
+    create_new_draft:
+      label: 'Create New Draft'
+      to: draft
+      weight: -4
+      from:
+        - draft
+        - published
+    needs_review:
+      label: 'Needs Review'
+      from:
+        - draft
+        - needs_review
+      to: needs_review
+      weight: -3
+    publish:
+      label: Publish
+      to: published
+      weight: 0
+      from:
+        - approved
+        - needs_review
+        - published
+    return_for_revision:
+      label: 'Return for revision'
+      from:
+        - needs_review
+      to: draft
+      weight: -2
+  entity_types:
+    node:
+      - article
+      - business
+      - event
+      - landing_page
+      - location
+      - page
+      - project
+  default_moderation_state: draft

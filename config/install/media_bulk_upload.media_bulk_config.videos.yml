@@ -1,0 +1,15 @@
+uuid: 51cfa98f-eec0-4651-ae18-fce91c9e971e
+langcode: en
+status: true
+dependencies: {  }
+id: videos
+label: Videos
+media_types:
+  video: video
+  audio: 0
+  file: 0
+  image: 0
+  remote_video: 0
+show_alt: null
+show_title: null
+form_mode: ''

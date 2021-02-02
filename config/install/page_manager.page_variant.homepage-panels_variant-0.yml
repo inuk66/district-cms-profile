@@ -1,0 +1,90 @@
+uuid: 69f4c324-ffb2-425a-8a89-bf69b01d71f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.homepage
+    - views.view.articles
+    - views.view.events
+    - views.view.homepage_block
+    - views.view.search
+  module:
+    - panels
+    - views
+id: homepage-panels_variant-0
+label: 'Main homepage'
+body_classes: front--main
+variant: panels_variant
+variant_settings:
+  blocks:
+    ca24761d-4731-43f8-8035-56d3973e4719:
+      id: 'views_block:articles-latest_block'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: content
+      weight: 2
+      uuid: ca24761d-4731-43f8-8035-56d3973e4719
+      context_mapping: {  }
+      css_classes: ''
+      css_id: ''
+      css_styles: ''
+    a607ec76-05ca-4420-8c03-84c609884b20:
+      id: 'views_exposed_filter_block:search-sitewide_search'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      region: content
+      weight: -1
+      uuid: a607ec76-05ca-4420-8c03-84c609884b20
+      context_mapping: {  }
+      css_classes: homepage-search
+      css_id: ''
+      css_styles: ''
+    d74a169c-8978-47f6-b066-3f7277b0dce8:
+      id: 'views_block:events-latest_events'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: content
+      weight: 1
+      uuid: d74a169c-8978-47f6-b066-3f7277b0dce8
+      context_mapping: {  }
+      css_classes: ''
+      css_id: ''
+      css_styles: ''
+    4819793d-1b7c-418f-ac67-977942311191:
+      id: 'views_block:homepage_block-block'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      region: content
+      weight: 0
+      uuid: 4819793d-1b7c-418f-ac67-977942311191
+      context_mapping: {  }
+      css_classes: ''
+      css_id: ''
+      css_styles: ''
+  id: panels_variant
+  uuid: 815f7829-d376-4ec0-a3a9-57c7be1a9fb2
+  label: null
+  weight: 0
+  layout: layout_onecol
+  layout_settings:
+    label: ''
+  page_title: Home
+  storage_type: page_manager
+  storage_id: homepage-panels_variant-0
+  builder: standard
+page: homepage
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

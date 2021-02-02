@@ -1,0 +1,17 @@
+uuid: 51704c1b-0ce8-46a3-8a00-5e4568a8d5c7
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Event
+type: event
+description: 'Content that relates to an even occurring at one or more time intervals'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

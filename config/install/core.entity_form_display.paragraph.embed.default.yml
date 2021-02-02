@@ -1,0 +1,23 @@
+uuid: 7499bc52-712c-49aa-bc74-f626f8130317
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.embed.field_iframe
+    - paragraphs.paragraphs_type.embed
+  module:
+    - iframe
+id: paragraph.embed.default
+targetEntityType: paragraph
+bundle: embed
+mode: default
+content:
+  field_iframe:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: iframe_urlwidthheight
+    region: content
+hidden:
+  created: true
+  status: true

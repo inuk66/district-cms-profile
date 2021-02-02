@@ -1,0 +1,22 @@
+uuid: 917d158d-b71c-4dd3-b27b-3298585867fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_coordinates
+    - node.type.event
+  module:
+    - geofield
+id: node.event.field_coordinates
+field_name: field_coordinates
+entity_type: node
+bundle: event
+label: Coordinates
+description: 'The geographical coordinates that this event takes place at'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  backend: geofield_backend_default
+field_type: geofield

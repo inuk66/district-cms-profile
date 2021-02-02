@@ -1,0 +1,10 @@
+uuid: 3588d50a-56c2-4f27-9f54-1a3a15c56043
+langcode: en
+status: true
+dependencies: {  }
+id: links
+label: Links
+icon_uuid: null
+icon_default: null
+description: 'A collection of links'
+behavior_plugins: {  }

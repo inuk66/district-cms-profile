@@ -1,0 +1,12 @@
+uuid: 253f8e7d-10a3-46bf-8310-ec751a5983a2
+langcode: en
+status: true
+dependencies: {  }
+id: homepage
+label: Homepage
+description: 'Main front page of the site'
+use_admin_theme: false
+path: /home
+access_logic: and
+access_conditions: {  }
+parameters: {  }

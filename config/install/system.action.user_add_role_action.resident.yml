@@ -1,0 +1,14 @@
+uuid: a97159d4-5942-4bf0-bfc8-bdf9219a28dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.resident
+  module:
+    - user
+id: user_add_role_action.resident
+label: 'Add the Resident role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: resident

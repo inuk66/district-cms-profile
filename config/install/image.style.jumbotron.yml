@@ -1,0 +1,15 @@
+uuid: 65ef81e1-ab86-4769-990a-e4746deb433f
+langcode: en
+status: true
+dependencies: {  }
+name: jumbotron
+label: 'Jumbotron (1920x800)'
+effects:
+  8e919423-ca49-4df4-981b-be5fbfeeadec:
+    uuid: 8e919423-ca49-4df4-981b-be5fbfeeadec
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1920
+      height: 800
+      anchor: center-center

@@ -1,0 +1,28 @@
+uuid: 16db3386-49e1-488d-a6ae-32fd42bbff85
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meeting_minutes
+    - media.type.file
+    - node.type.meeting
+id: node.meeting.field_meeting_minutes
+field_name: field_meeting_minutes
+entity_type: node
+bundle: meeting
+label: 'Meeting Minutes'
+description: 'Full meeting minutes and outcomes'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      file: file
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

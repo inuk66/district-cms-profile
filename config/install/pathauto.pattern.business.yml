@@ -1,0 +1,22 @@
+uuid: 328e7c17-147c-4fe4-82b5-3048a6cabad5
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: business
+label: Business
+type: 'canonical_entities:node'
+pattern: '/business/directory/[node:field_business_type:0:entity]/[node:title]'
+selection_criteria:
+  eadc4b84-04de-4357-bedb-49764ec2a20c:
+    id: node_type
+    bundles:
+      business: business
+    negate: false
+    context_mapping:
+      node: node
+    uuid: eadc4b84-04de-4357-bedb-49764ec2a20c
+selection_logic: and
+weight: -5
+relationships: {  }

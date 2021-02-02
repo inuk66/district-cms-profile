@@ -1,0 +1,141 @@
+uuid: e6189aa9-2831-416c-90c7-656f434f5b07
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.landing_page.body
+    - field.field.node.landing_page.field_image
+    - field.field.node.landing_page.field_landing_content
+    - field.field.node.landing_page.field_meta_tags
+    - field.field.node.landing_page.field_tags
+    - field.field.node.landing_page.field_yoast_seo
+    - node.type.landing_page
+  module:
+    - ds
+    - entity_reference_revisions
+    - media
+    - metatag
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - node_title
+        - body
+        - field_landing_content
+        - field_image
+        - field_tags
+        - field_meta_tags
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h1
+          class: ''
+          link: false
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+_core:
+  default_config_hash: svwlj7oPInED5T3Tau1maronHRRAfq617RXDi2uxOUk
+id: node.landing_page.search_index
+targetEntityType: node
+bundle: landing_page
+mode: search_index
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: ds_content
+  field_image:
+    type: media_thumbnail
+    weight: 3
+    region: ds_content
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+  field_landing_content:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: ds_content
+  field_meta_tags:
+    type: metatag_empty_formatter
+    weight: 5
+    region: ds_content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_tags:
+    weight: 4
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: ds_content
+hidden:
+  anonymous_comments_login_link: true
+  content_moderation_control: true
+  field_yoast_seo: true
+  links: true
+  search_api_excerpt: true

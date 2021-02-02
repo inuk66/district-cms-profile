@@ -1,0 +1,22 @@
+uuid: 8f90dd72-85e9-4458-9053-3fff4c023c26
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - district_base
+_core:
+  default_config_hash: gpzWBQ35JjC15I6yHaBYlLpQl57k6rKYL-KTsSvPV3A
+id: district_base_help
+theme: district_base
+region: help
+weight: -6
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

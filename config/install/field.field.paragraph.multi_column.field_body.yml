@@ -1,0 +1,23 @@
+uuid: e693d912-9fb3-4f40-92e5-6316f476abe1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body
+    - paragraphs.paragraphs_type.multi_column
+  module:
+    - text
+_core:
+  default_config_hash: FuGuyjslYGY3nQnyNZXW1UDjLJw7XPtMJhoEddwhT5M
+id: paragraph.multi_column.field_body
+field_name: field_body
+entity_type: paragraph
+bundle: multi_column
+label: Prefix
+description: 'Text to display above the cards.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

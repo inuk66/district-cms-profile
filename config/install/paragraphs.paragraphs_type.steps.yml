@@ -1,0 +1,10 @@
+uuid: b470e85f-7d3b-4252-9868-32cbb98fb855
+langcode: en
+status: true
+dependencies: {  }
+id: steps
+label: Steps
+icon_uuid: null
+icon_default: null
+description: 'Steps provide a numbered list of items, commonly used for steps throughout a process.'
+behavior_plugins: {  }

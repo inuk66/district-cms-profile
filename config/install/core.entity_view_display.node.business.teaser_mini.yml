@@ -1,0 +1,185 @@
+uuid: 05a09e86-fe52-45db-95ca-491f2b0e1220
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser_mini
+    - field.field.node.business.body
+    - field.field.node.business.field_address
+    - field.field.node.business.field_business_type
+    - field.field.node.business.field_contact
+    - field.field.node.business.field_coordinates
+    - field.field.node.business.field_features
+    - field.field.node.business.field_image
+    - field.field.node.business.field_meta_tags
+    - field.field.node.business.field_phone
+    - field.field.node.business.field_tags
+    - field.field.node.business.field_website
+    - field.field.node.business.field_yoast_seo
+    - image.style.thumbnail
+    - node.type.business
+  module:
+    - ds
+    - media
+    - panelizer
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: district_teaser_map_popup
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        wrappers:
+          image: div
+          main: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      image:
+        - field_image
+      main:
+        - node_title
+        - field_business_type
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: h4
+          class: ''
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.business.teaser_mini
+targetEntityType: node
+bundle: business
+mode: teaser_mini
+content:
+  field_business_type:
+    type: entity_reference_label
+    weight: 2
+    region: main
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: '1'
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+  field_image:
+    type: media_thumbnail
+    weight: 0
+    region: image
+    label: hidden
+    settings:
+      image_style: thumbnail
+      image_link: content
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+hidden:
+  anonymous_comments_login_link: true
+  body: true
+  content_moderation_control: true
+  field_address: true
+  field_contact: true
+  field_coordinates: true
+  field_features: true
+  field_meta_tags: true
+  field_phone: true
+  field_tags: true
+  field_website: true
+  field_yoast_seo: true
+  links: true
+  search_api_excerpt: true

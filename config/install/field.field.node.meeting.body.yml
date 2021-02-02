@@ -1,0 +1,23 @@
+uuid: 6a1e7904-831c-4330-9e9e-6cd4234cf290
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.meeting
+  module:
+    - text
+id: node.meeting.body
+field_name: body
+entity_type: node
+bundle: meeting
+label: 'Meeting summary'
+description: 'A brief summary of what this meeting will cover'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

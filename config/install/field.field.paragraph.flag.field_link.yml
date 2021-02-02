@@ -1,0 +1,25 @@
+uuid: 695bb402-5081-4086-8a93-7011981d05de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link
+    - paragraphs.paragraphs_type.flag
+  module:
+    - link
+_core:
+  default_config_hash: CAOEORpZ1eqgVeeYFiGeTCLTovsES2iVvubT8zRL1eE
+id: paragraph.flag.field_link
+field_name: field_link
+entity_type: paragraph
+bundle: flag
+label: Link
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

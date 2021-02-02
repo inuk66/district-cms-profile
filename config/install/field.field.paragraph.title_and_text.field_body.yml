@@ -1,0 +1,21 @@
+uuid: 4bb64eda-729f-4da1-a02c-412f52083d63
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body
+    - paragraphs.paragraphs_type.title_and_text
+  module:
+    - text
+id: paragraph.title_and_text.field_body
+field_name: field_body
+entity_type: paragraph
+bundle: title_and_text
+label: Content
+description: 'The content to support the title provided'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

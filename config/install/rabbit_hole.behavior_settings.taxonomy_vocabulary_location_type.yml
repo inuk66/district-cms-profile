@@ -1,0 +1,14 @@
+uuid: 03d23ea7-95fc-4ed2-8656-0cedb3f4fa92
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.location_type
+id: taxonomy_vocabulary_location_type
+entity_type_id: null
+entity_id: null
+action: page_redirect
+allow_override: 1
+redirect: '/services/facilities?type=[term:tid]'
+redirect_code: 301
+redirect_fallback_action: null

@@ -1,0 +1,26 @@
+id: forms
+label: Forms
+ui_limit: user|default
+properties:
+  block: district_form_selector_block
+  use_block_title: false
+  add_block_wrappers: false
+  config:
+    id: district_form_selector_block
+    label: ''
+    provider: district_forms
+    label_display: visible
+    forms:
+      - asset_protection_permit
+      - kindergarten_registration
+      - parking_fines
+      - permit_renewal
+      - pet_registration_renewal
+      - service_request
+      - trees_and_parks
+      - vandalism_report
+    empty_text: 'Select a service'
+type: block
+type_label: 'Block field'
+entities:
+  user: user
